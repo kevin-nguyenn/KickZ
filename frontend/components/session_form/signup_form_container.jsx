@@ -48,8 +48,9 @@ class SignupForm extends React.Component {
                                 value={this.state.email}
                                 onChange={this.update('email')}
                             />
-
                         </label>
+
+                        <input type="button" value="Sign Up"/>
                     </div>
                 </form>
             </div>
@@ -71,4 +72,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

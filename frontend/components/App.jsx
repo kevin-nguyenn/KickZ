@@ -8,7 +8,6 @@ import LogInFormContainer from './session_form/login_form_container';
 
 
 const App = () => {
-    // const showNavBar = this.props.currentUser ? 
     return (
         <div>
             <header className="nav-container">

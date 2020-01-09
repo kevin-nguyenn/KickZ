@@ -30,6 +30,30 @@
     margin: 60px 0px 15px 0px;
 }
 
+.nav-dropdown {
+    font-size: 16px;
+    border: none;
+}
+
+.nav-dropdown-items{
+    display: none;
+    position: absolute; 
+}
+
+.nav-dropdown-items a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-dropdown-items a:hover {
+    background-color: #ddd;
+}
+
+.nav-dropdown:hover .nav-dropdown-items {
+    display: block;
+}
+
 .form-header {
     display: block;
 }
@@ -50,7 +74,7 @@
     border: solid 1px #e0e0e0;
     border-radius: 4.5px;
     width: 398px;
-    height: 468px;
+    height: 520px;
     text-align: center;
 }
 
@@ -59,6 +83,7 @@
     font-weight: 700;
     font-size: 40px;
     justify-content: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .form-input {

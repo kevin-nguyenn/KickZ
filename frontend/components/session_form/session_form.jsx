@@ -27,7 +27,8 @@ class SessionForm extends React.Component {
         };
 
         if (e.target.innerHTML === "Demo User Login") {
-            this.props.login(demoUser);
+            this.props.login(demoUser)
+                .then(this.props.history.push("/"));
         } else {
             this.props.processForm(user);
         }
@@ -36,6 +37,7 @@ class SessionForm extends React.Component {
     componentDidMount() {
         document.getElementsByClassName("header-logo")[0].classList.add("hidden");
         document.getElementsByClassName("form-header")[0].classList.remove("hidden");
+        document.getElementsByClassName("header-nav")[0].classList.add("hidden");
     }
 
     renderErrors() {
@@ -53,6 +55,7 @@ class SessionForm extends React.Component {
     componentWillUnmount() {
         document.getElementsByClassName("header-logo")[0].classList.remove("hidden");
         document.getElementsByClassName("form-header")[0].classList.add("hidden");
+        document.getElementsByClassName("header-nav")[0].classList.add("hidden");
         this.props.clearErrors();
     }
 

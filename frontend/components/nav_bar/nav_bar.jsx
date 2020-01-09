@@ -1,30 +1,42 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import NavBarContainer from "./nav_bar_container";
+import { Link, NavLink } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+        const showNavLinks = (
+            <li>
+                <span className="nav-link-item"><Link to="/shoes">Browse</Link></span>
+            </li>
+        )
+
         const sessionDisplay = this.props.currentUser ? (
-            <div className="nav-dropdown">
-                <Link to="/">My Account</Link>
-                <div className="nav-dropdown-items">
-                    <a href="#">Buying</a>
-                    <a href="#">Selling</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#" onClick={this.props.logout}>Logout</a>
+            <div className="nav-links">
+                { showNavLinks }
+                <div className="nav-dropdown">
+                    <li>
+                        <span className="nav-link-item"><Link to="/">My Account</Link></span>
+                    </li>
+                    <div className="nav-dropdown-items">
+                        <a href="#">Buying</a>
+                        <a href="#">Selling</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#" onClick={this.props.logout}>Logout</a>
+                    </div>
                 </div>
             </div>
         ) : (
-            <div>
+            <div className="nav-links">
+                { showNavLinks }
                 <li>
-                    <span className="nav-links"><Link to="/">Browse</Link></span>
+                    <span className="nav-link-item"><Link to="/login">Login</Link></span>
                 </li>
                 <li>
-                    <span className="nav-links"><Link to="/login">Login</Link></span>
-                </li>
-                <li>
-                    <span className="nav-links"><Link to="/signup">Sign up</Link></span>
+                    <span className="nav-link-item"><Link to="/signup">Sign up</Link></span>
                 </li>
             </div>
         )
@@ -36,6 +48,7 @@ class NavBar extends React.Component {
                 <ul className="header-list">
                     { sessionDisplay }
                 </ul>
+                
             </nav>
         )
     }

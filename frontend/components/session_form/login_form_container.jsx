@@ -6,7 +6,7 @@ import SessionForm from './session_form';
 import { clearErrors } from '../../actions/session_actions';
 
 
-const mapStateToProps = ({ errors }) => {
+const mapStateToProps = ({ errors, ownProps }) => {
     return {
         errors: errors.session,
         formType: 'Log In',
@@ -16,6 +16,7 @@ const mapStateToProps = ({ errors }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        login: (user) => dispatch(login(user)),
         processForm: (user) => dispatch(login(user)),
         clearErrors: () => dispatch(clearErrors())
     };

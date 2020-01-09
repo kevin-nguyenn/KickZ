@@ -25,9 +25,7 @@ class NavBar extends React.Component {
                     <li>
                         <span className="nav-links"><Link to="/">Browse</Link></span>
                     </li>
-                    <div className="nav-session-container">
-                        { sessionDisplay }
-                    </div>
+                    { sessionDisplay }
                 </ul>
             </nav>
         )

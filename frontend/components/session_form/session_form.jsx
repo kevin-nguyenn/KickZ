@@ -33,7 +33,13 @@ class SessionForm extends React.Component {
     handleDemo(e) {
         e.preventDefault();
         const demoUser = Object.assign({}, this.demoUser);
-        this.props.processForm(demoUser);
+        this.props.processForm(demoUser)
+            .then(this.history.push("/"));
+    }
+
+    componentDidMount() {
+        document.getElementsByClassName("header-logo")[0].classList.add("hidden");
+        document.getElementsByClassName("form-header")[0].classList.remove("hidden");
     }
 
     renderErrors() {
@@ -49,6 +55,8 @@ class SessionForm extends React.Component {
     }
 
     componentWillUnmount() {
+        document.getElementsByClassName("header-logo")[0].classList.remove("hidden");
+        document.getElementsByClassName("form-header")[0].classList.add("hidden");
         this.props.clearErrors();
     }
 
@@ -56,7 +64,6 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Kickz!
 
                     <br />
 
@@ -67,34 +74,42 @@ class SessionForm extends React.Component {
 
                         <br />
 
-                        <label>Username:
+                        <label>
                             <input type="text"
+                                placeholder="Username"
                                 value={this.state.username}
                                 onChange={this.update('username')}
-                                className="login-input"
+                                className="form-input"
                             />
                         </label>
 
                         <br />
 
                         {this.props.formType === "Sign Up" ? 
-                            (<label><div>Email: </div> <input type="text" value={this.state.email} onChange={this.update('email')}/> </label>) : "" 
+                            (<label><div></div> <input type="text"
+                                placeholder="Email"
+                                className="form-input"
+                                value={this.state.email}
+                                onChange={this.update('email')}/> </label>) : "" 
                         }
 
                         <br/>
 
-                        <label>Password:
+                        <label>
                             <input type="password"
+                                placeholder="Password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                className="login-input"
+                                className="form-input"
                             />
                         </label>
 
                         <br />
 
-                        <button className="demo-button" onClick={this.handleDemo}>Demo User Login</button>
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <div className="buttons">
+                            <button className="demo-button" onClick={this.handleDemo}>Demo User Login</button>
+                            <button className="session-submit" type="submit" onClick={this.handleSubmit}>{this.props.formType}</button>
+                        </div>
                     </div>
                 </form>
             </div>

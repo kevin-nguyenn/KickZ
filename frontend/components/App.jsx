@@ -7,17 +7,23 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 
 
-const App = () => (
-    <div>
-        <header className="nav-container">
-            <NavBarContainer />
-        </header>
+const App = () => {
+    // const showNavBar = this.props.currentUser ? 
+    return (
+        <div>
+            <header className="nav-container">
+                <NavBarContainer />
+            </header>
 
-        <Switch>
-            <AuthRoute path="/login" component={LogInFormContainer} />
-            <AuthRoute path="/signup" component={SignUpFormContainer} />
-        </Switch>
-    </div>
-);
+            <header className="form-header hidden">
+                <header className="form-header-logo">KickZ</header>
+                <Switch>
+                    <AuthRoute exact path="/login" component={LogInFormContainer} />
+                    <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+                </Switch>
+            </header>
+        </div>
+    )
+};
 
 export default App;

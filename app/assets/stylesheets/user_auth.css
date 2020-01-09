@@ -1,17 +1,18 @@
 .header-container {
     width: 1400px;
-    /* text-transform: uppercase;
-    position: fixed;
-    z-index: 100; */
+    /* background-image: url("sneaker-background.jpeg");
+    background-color: #cccccc; */
 }
 
 .header-logo {
     display: inline-block;
-    margin: 30px 0px 25px 0px;
+    margin: 50px 0px 10px -50px;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 .header-container li {
-    padding: 15px 0px 20px 30px;
+    padding: 50px 0px 10px 10px;
 }
 
 .header-nav {
@@ -19,5 +20,74 @@
     justify-content: space-between;
     margin: 0 90px;
     align-items: center;
-    
+}
+
+.header-list {
+    font-size: 15px;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    margin: 60px 0px 15px 0px;
+}
+
+.form-header {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ----------------------------------------------- */
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-box {
+    background: #fff;
+    border: solid 1px #e0e0e0;
+    border-radius: 4.5px;
+    width: 398px;
+    height: 468px;
+    text-align: center;
+}
+
+.form-header-logo {
+    display: flex;
+    font-weight: 700;
+    font-size: 40px;
+    justify-content: center;
+}
+
+.form-input {
+    width: 328px;
+    height: 23px;
+    background: #FFFFFF;
+    margin: 0px 6px;
+    padding: 16px 10px 5px;
+    font-size: 16px;
+    font-weight: 250;
+    font-family: 'proxima-nova', sans-serif;
+}
+
+.buttons {
+    align-content: flex-end;
+    margin-top: 165px;
+    padding: 25px 50px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.demo-button {
+    width: 200px;
+    height: 50px;
+    font-size: 14px;
+}
+
+.session-submit {
+    width: 200px;
+    height: 50px;
+    font-size: 14px;
 }

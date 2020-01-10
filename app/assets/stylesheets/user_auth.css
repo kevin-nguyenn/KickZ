@@ -21,11 +21,10 @@
 
 .header-list {
     display: inline;
-    font-size: 15px;
+    font-size: 18px;
     list-style-type: none;
     text-align: center;
     margin: 60px 0px 0px 0px;
-    color: #FFFFFF;
 }
 
 .header-list li{
@@ -34,11 +33,20 @@
 }
 
 .nav-links {
-    display: flex;    
+    display: flex;
+}
+
+.nav-link-item {
+    color: white;
+    
+}
+
+.nav-link-item:visited {
+    color: white;
 }
 
 .nav-dropdown {
-    font-size: 16px;
+    font-size: 18px;
     border: none;
 }
 
@@ -90,7 +98,7 @@
     border: solid 1px #e0e0e0;
     border-radius: 4px;
     width: 398px;
-    height: 520px;
+    height: 550px;
     text-align: center;
 }
 
@@ -116,24 +124,47 @@
 }
 
 .buttons {
-    padding: 50px 25px 25px;
+    /* padding: 50px 25px 25px; */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-end; */
+    margin-top: 40%;
+    background-color: blue;
 }
 
 .demo-button {
     width: 349px;
     height: 50px;
     font-size: 14px;
+    background-color: #3b5998;
+    color: #FFFFFF;
+    border-radius: 2px;
 }
 
 .session-submit {
     width: 349px;
     font-size: 20px;
-    /* height: 1000px; */
+    height: 50px;
     /* padding: 0; */
     /* line-height: inherit; */
 }
+
+.switch-form-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px 20px;
+}
+
+.switch-form-tab {
+    border-bottom: 2px solid #010101;
+    height: 30px;
+    width: 100%;
+    padding: 14px;
+}
+
+/* .switch-form-tab:active {
+    text-decoration: underline;
+} */
 
 .search-container {
     height: 520px;

@@ -15,8 +15,8 @@ const App = () => {
             </header>
 
             <header className="form-header hidden">
-                <header className="form-header-logo">KickZ
-                    <Link to="/"></Link>
+                <header className="form-header-logo">
+                    <a href="/">KickZ</a>                    
                 </header>
 
                 <Switch>

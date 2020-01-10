@@ -47,14 +47,10 @@ class NavBar extends React.Component {
             </div>
         )
 
-        if ( this.props.currentUser ) {
-
-        }
-
         return (
             <nav className="header-nav">
-                <h1 className="header-logo">KickZ</h1>
-                {/* <a href="#" className="header-logo">KickZ</a> */}
+                {/* <h1 className="header-logo">KickZ</h1> */}
+                <a href="/" className="header-logo">KickZ</a>
 
                 <ul className="header-list">
                     { sessionDisplay }

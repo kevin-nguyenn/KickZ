@@ -9,10 +9,7 @@
     margin: 50px 0px 10px -50px;
     font-weight: 700;
     font-size: 30px;
-}
-
-.header-container li {
-    padding: 50px 0px 10px 10px;
+    color: #FFFFFF;
 }
 
 .header-nav {
@@ -27,7 +24,8 @@
     font-size: 15px;
     list-style-type: none;
     text-align: center;
-    margin: 60px 0px 15px 0px;
+    margin: 60px 0px 0px 0px;
+    color: #FFFFFF;
 }
 
 .header-list li{
@@ -36,7 +34,7 @@
 }
 
 .nav-links {
-    display: flex;
+    display: flex;    
 }
 
 .nav-dropdown {
@@ -54,6 +52,7 @@
     text-decoration: none;
     display: block;
     background-color: gray;
+    color: #FFFFFF;
     width: 100px;
     background-size: inherit;
     height: 25px;
@@ -89,7 +88,7 @@
 .login-form-box {
     background: #fff;
     border: solid 1px #e0e0e0;
-    border-radius: 4.5px;
+    border-radius: 4px;
     width: 398px;
     height: 520px;
     text-align: center;
@@ -98,16 +97,18 @@
 .form-header-logo {
     display: flex;
     font-weight: 700;
+    color: #FFFFFF;
     font-size: 40px;
     justify-content: center;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 2px 3px #000000;
 }
 
 .form-input {
+    display: flex;
     width: 328px;
     height: 23px;
     background: #FFFFFF;
-    margin: 0px 6px;
+    margin: 15px 22.5px;
     padding: 16px 10px 5px;
     font-size: 16px;
     font-weight: 250;
@@ -115,47 +116,32 @@
 }
 
 .buttons {
-    align-content: flex-end;
-    margin-top: 165px;
-    padding: 25px 50px 25px;
+    padding: 50px 25px 25px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .demo-button {
-    width: 200px;
+    width: 349px;
     height: 50px;
     font-size: 14px;
 }
 
 .session-submit {
-    width: 200px;
-    height: 50px;
-    font-size: 14px;
+    width: 349px;
+    font-size: 20px;
+    /* height: 1000px; */
+    /* padding: 0; */
+    /* line-height: inherit; */
 }
 
 .search-container {
-    /* background-image: url("./images/sneaker-background.jpeg");
-    background-position: center; */
     height: 520px;
     width: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
-    left: 0;
 }
-
-/* .search-container img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: auto;
-    background-position: 50% 50%;
-    margin-left: auto;
-} */
 
 .search-background span {
     background-image: url("./images/sneaker-background.jpeg");
@@ -164,5 +150,5 @@
     position: absolute;
     color: transparent;
     background-size: contain;
-    margin-left: auto;
+    background-repeat: no-repeat;
 }

@@ -5,7 +5,6 @@ import { AuthRoute } from "../util/route_util";
 import NavBarContainer from "./nav_bar/nav_bar_container";
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-import Home from './home';
 
 
 const App = () => {
@@ -23,7 +22,7 @@ const App = () => {
                 <Switch>
                     <AuthRoute exact path="/login" component={LogInFormContainer} />
                     <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-                    <AuthRoute exact path="/" component={Home}/>
+                    {/* <AuthRoute exact path="/" component={Home}/> */}
                 </Switch>
             </header>
             

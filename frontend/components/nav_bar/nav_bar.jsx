@@ -8,6 +8,7 @@ class NavBar extends React.Component {
     }
 
     render() {
+        
         const showNavLinks = (
             <li>
                 <span className="nav-link-item"><Link to="/shoes">Browse</Link></span>
@@ -33,17 +34,27 @@ class NavBar extends React.Component {
             <div className="nav-links">
                 { showNavLinks }
                 <li>
-                    <span className="nav-link-item"><Link to="/login">Login</Link></span>
+                    <span className="nav-link-item">
+                        {/* <Link to="/login">Login</Link> */}
+                        <NavLink to="/login">Login</NavLink>
+                    </span>
                 </li>
                 <li>
-                    <span className="nav-link-item"><Link to="/signup">Sign up</Link></span>
+                    <span className="nav-link-item">
+                        <Link to="/signup">Sign up</Link>
+                    </span>
                 </li>
             </div>
         )
 
+        if ( this.props.currentUser ) {
+
+        }
+
         return (
             <nav className="header-nav">
                 <h1 className="header-logo">KickZ</h1>
+                {/* <a href="#" className="header-logo">KickZ</a> */}
 
                 <ul className="header-list">
                     { sessionDisplay }

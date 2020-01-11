@@ -5,26 +5,30 @@
 }
 
 .header-logo {
-    display: inline-block;
-    margin: 50px 0px 10px -50px;
+    display: flex;
+    /* margin: 50px 0px 10px -50px; */
     font-weight: 700;
     font-size: 30px;
     color: #FFFFFF;
+    text-decoration: none;
+    margin-top: 5%;
 }
 
 .header-nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 90px;
+    margin-left: 5%;
+    margin-right: 5%;
     align-items: center;
 }
 
 .header-list {
-    display: inline;
+    display: flex;
     font-size: 18px;
     list-style-type: none;
     text-align: center;
-    margin: 60px 0px 0px 0px;
+    /* justify-content: space-between; */
+    margin-top: 5%;
 }
 
 .header-list li{
@@ -36,13 +40,9 @@
     display: flex;
 }
 
-.nav-link-item {
+.nav-link-item  a{
     color: white;
-    
-}
-
-.nav-link-item:visited {
-    color: white;
+    text-decoration: none;
 }
 
 .nav-dropdown {
@@ -90,7 +90,8 @@
 
 .login-form-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
 }
 
 .login-form-box {
@@ -102,13 +103,14 @@
     text-align: center;
 }
 
-.form-header-logo {
+.form-header-logo a{
     display: flex;
     font-weight: 700;
     color: #FFFFFF;
     font-size: 40px;
     justify-content: center;
     text-shadow: 1px 2px 3px #000000;
+    text-decoration: none;
 }
 
 .form-input {
@@ -127,9 +129,7 @@
     /* padding: 50px 25px 25px; */
     display: flex;
     justify-content: center;
-    /* align-items: flex-end; */
-    margin-top: 40%;
-    background-color: blue;
+    margin-top: 38%;
 }
 
 .demo-button {
@@ -145,8 +145,6 @@
     width: 349px;
     font-size: 20px;
     height: 50px;
-    /* padding: 0; */
-    /* line-height: inherit; */
 }
 
 .switch-form-buttons {
@@ -157,17 +155,18 @@
 
 .switch-form-tab {
     border-bottom: 2px solid #010101;
-    height: 30px;
+    height: 50px;
     width: 100%;
     padding: 14px;
+    font-size: 18px;
 }
 
-/* .switch-form-tab:active {
-    text-decoration: underline;
-} */
+.switch-form-tab a{
+    text-decoration: none;
+}
 
 .search-container {
-    height: 520px;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -182,4 +181,29 @@
     color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.word-set1 {
+    font-size: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-content: flex-end; */
+}
+
+.word-set2 {
+    font-size: 60px;
+    color: white;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    margin: 0px 450px 0px 450px;
+    /* margin: auto; */
+}
+
+.search-bar {
+    margin-top: 175px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }

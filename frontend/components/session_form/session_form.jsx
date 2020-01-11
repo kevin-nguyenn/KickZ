@@ -29,7 +29,6 @@ class SessionForm extends React.Component {
 
         if (e.target.innerHTML === "Demo User Login") {
             this.props.login(demoUser);
-                // .then(this.props.history.push("/"));
         } else {
             this.props.processForm(user);
         }
@@ -40,6 +39,8 @@ class SessionForm extends React.Component {
         document.getElementsByClassName("form-header")[0].classList.remove("hidden");
         document.getElementsByClassName("header-nav")[0].classList.add("hidden");
         document.getElementsByClassName("search-background")[0].classList.add("hidden");
+
+        //hiding and adding logos/nav-bar/background img for auth forms
     }
 
     renderErrors() {
@@ -68,15 +69,27 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="login-form-box">
 
                     <div className='switch-form-buttons'>
-                        {/* {this.props.formType} or {this.props.navLink} */}
-                        <button className="switch-form-tab">{this.props.formType}
-                            <Link to={`/${this.props.navLink}`}></Link>
+                        {/* work on disabling button and figure out way to make 
+                        buttons stationary */}
+                        <button className="switch-form-tab">
+                            <a>{this.props.formType}</a>
                         </button>
-                        <button className="switch-form-tab">{this.props.navLink}</button>
+                        <button className="switch-form-tab">
+                            {this.props.navLink}
+                        </button>
+                        {/* <div>Log In
+                            <Link to="/login"></Link>
+                        </div>
+                        <div>Sign Up
+                            <Link to="/signup"></Link>
+                        </div> */}
                     </div>
                     {this.renderErrors()}
 
-                    <button className="demo-button" onClick={this.handleSubmit}>Demo User Login</button>
+                    <button className="demo-button" onClick={this.handleSubmit}>
+                        Demo User Login
+                    </button>
+                    {/* get divider line with 'or' after demo button */}
 
                     <div className="login-form">
 
@@ -107,8 +120,10 @@ class SessionForm extends React.Component {
                         </label>
 
                         <div className="buttons">
-                            {/* <button className="demo-button" onClick={this.handleSubmit}>Demo User Login</button> */}
-                            <input className="session-submit" type="submit" onClick={this.handleSubmit} value={this.props.formType}/>
+                            <input className="session-submit" type="submit" 
+                                onClick={this.handleSubmit} 
+                                value={this.props.formType}
+                            />
                         </div>
                     </div>
                 </form>

@@ -177,7 +177,9 @@ class FormContainer extends React.Component {
                     className="form-input"
                     onBlur={this.handleLoginPasswordBlur}
                 />
-                <button onClick={this.handleLoginSubmit}>submit</button>
+                <button className="form-submit" onClick={this.handleLoginSubmit}>
+                    Submit
+                </button>
             </form>
         )
     }
@@ -206,7 +208,9 @@ class FormContainer extends React.Component {
                     className="form-input"
                     onChange={this.handleSignupPasswordBlur}
                 />
-                <button onClick={this.handleSignupSubmit}>Submit</button>
+                <button className="form-submit" onClick={this.handleSignupSubmit}>
+                    Submit
+                </button>
             </form>
         )
     }
@@ -222,10 +226,10 @@ class FormContainer extends React.Component {
                     <div className='tabLinks'>
                         {/* work on disabling button and figure out way to make 
                         buttons stationary */}
-                        <button id="loginTabLink" className="switch-form-tab" onClick={this.handleTabClick}>
+                        <button id="loginTabLink" className="login-tablink" onClick={this.handleTabClick}>
                             Log In
                         </button>
-                        <button id="signupTabLink" className="switch-form-tab" onClick={this.handleTabClick}>
+                        <button id="signupTabLink" className="signup-tablink" onClick={this.handleTabClick}>
                             Sign Up
                         </button>
                     </div>

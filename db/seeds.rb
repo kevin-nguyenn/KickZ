@@ -12,6 +12,26 @@
 
     jordan_1s = [
         {
-            name: "Jordan 1 Retro High Fearless UNC-Chicago",
+            name: "Jordan 1 Retro High Satin Black Toe (W)",
+            ticker: "AJ1H-STNBTW"
+        },
+        {
+            name: "Jordan 1 Retro High Obsidian UNC",
+            ticker: "AJ1H-UNCL"
+        }
+    ]
+
+    yeezys = [
+        {
+            name: "adidas Yeezy Boost 350 V2 Lundmark",
+            ticker: "350V2-LM"
+        },
+        {
+            name: "adidas Yeezy Boost 350 V2 Cream/Triple White",
+            ticker: "YZY350V2-CRMWHT"
+        },
+        {
+            name: "adidas Yeezy Boost 350 V2 Zebra",
+            ticker: "YZY350V2-ZEBRA"
         }
     ]

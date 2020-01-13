@@ -150,19 +150,21 @@
     border-radius: 2px;
 }
 
-.session-submit {
+.form-submit {
     width: 349px;
-    font-size: 20px;
-    height: 50px;
+    font-size: 18px;
+    height: 20%;
+    margin-left: 6%;
 }
 
-.tabLinks{
+.tabLinks {
     display: flex;
     justify-content: space-around;
     margin: 20px 0px 20px;
 }
 
-.switch-form-tab {
+.login-tablink {
+    border-width: 0px;
     border-bottom: 2px solid #010101;
     height: 50px;
     width: 100%;
@@ -170,8 +172,13 @@
     font-size: 18px;
 }
 
-.switch-form-tab a{
-    text-decoration: none;
+.signup-tablink {
+    border-width: 0px;
+    border-bottom: 2px solid #010101;
+    height: 50px;
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
 }
 
 /* -------------------------------------------------- */

@@ -88,7 +88,7 @@
 
 /* ----------------------------------------------- */
 
-.login-form-container {
+.form-container {
     display: flex;
     justify-content: space-evenly;
     padding-top: 100px;
@@ -106,7 +106,7 @@
 .form-header-logo a{
     display: flex;
     font-weight: 700;
-    color: #FFFFFF;
+    color: red;
     font-size: 40px;
     justify-content: center;
     text-shadow: 1px 2px 3px #000000;
@@ -123,6 +123,15 @@
     font-size: 16px;
     font-weight: 250;
     font-family: 'proxima-nova', sans-serif;
+}
+
+.tabContent {
+    padding-top: 10%;
+}
+
+.loginContent, .signupContent {
+    display: flex;
+    flex-direction: column;
 }
 
 .buttons {
@@ -147,7 +156,7 @@
     height: 50px;
 }
 
-.switch-form-buttons {
+.tabLinks{
     display: flex;
     justify-content: space-around;
     margin: 20px 0px 20px;
@@ -164,6 +173,8 @@
 .switch-form-tab a{
     text-decoration: none;
 }
+
+/* -------------------------------------------------- */
 
 .search-container {
     height: 100%;

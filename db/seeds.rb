@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# Jordan 1
+    #array of shoe objects
+
+    jordan_1s = [
+        {
+            name: "Jordan 1 Retro High Fearless UNC-Chicago",
+        }
+    ]

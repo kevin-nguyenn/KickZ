@@ -34,6 +34,13 @@ class SessionForm extends React.Component {
         }
     }
 
+    // tabClick(e, tab) {
+    //     e.preventDefault();
+    //     const tabcontent, tablinks, i;
+
+    //     // tabcontent = document.getElementsByClassName()
+    // }
+
     componentDidMount() {
         document.getElementsByClassName("header-logo")[0].classList.add("hidden");
         document.getElementsByClassName("form-header")[0].classList.remove("hidden");
@@ -73,16 +80,12 @@ class SessionForm extends React.Component {
                         buttons stationary */}
                         <button className="switch-form-tab">
                             <a>{this.props.formType}</a>
+                            {/* Log In */}
                         </button>
                         <button className="switch-form-tab">
                             {this.props.navLink}
+                            {/* Sign Up */}
                         </button>
-                        {/* <div>Log In
-                            <Link to="/login"></Link>
-                        </div>
-                        <div>Sign Up
-                            <Link to="/signup"></Link>
-                        </div> */}
                     </div>
                     {this.renderErrors()}
 

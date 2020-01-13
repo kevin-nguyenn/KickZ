@@ -6,6 +6,8 @@ import NavBarContainer from "./nav_bar/nav_bar_container";
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import ShoeIndexContainer from './shoes/shoe_index_container'
+import FormContainer from './session_form/form';
+import { signup } from "../util/session_api_util";
 
 
 const App = () => {
@@ -23,9 +25,10 @@ const App = () => {
                 </header>
 
                 <Switch>
-                    <AuthRoute exact path="/login" component={LogInFormContainer} />
-                    <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-                    <AuthRoute exact path="/" component={ShoeIndexContainer}/>
+                    <AuthRoute exact path="/" component={ShoeIndexContainer} />
+                    <AuthRoute exact path="/login" component={FormContainer} />
+                    <AuthRoute exact path="/signup" component={FormContainer}/>
+                    {/* <AuthRoute exact path="/shoes" component={ShoeIndexContainer}/> */}
                 </Switch>
             </header>
             

@@ -5,10 +5,6 @@ import ShoeIndexItem from './shoe_index_item';
 class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            shoes: this.props.shoes
-        }
     }
 
     componentDidMount() {
@@ -16,22 +12,28 @@ class ShoeIndex extends React.Component {
     }
 
     render() {
-        // debugger;
         // const { shoes } = this.props;
+        // if (this.props.shoes === undefined) return null;
+        // debugger;
+
         return (
             <div className="shoes-index">
                 <div className="title-container">
-                    Sneakers
                     <div className="title-container-msg">
-                        On KickZ, every sneaker you want is always available. Buy and sell new sneakers from Air Jordan, Adidas, Nike and more!
+                        <span className="title-header">
+                            Sneakers
+                        </span>
+                        <span className="title-msg">
+                            On KickZ, every sneaker you want is always available. Buy and sell new sneakers from Air Jordan, Adidas, Nike and more!
+                        </span>
                     </div>
+                    <ul className="title-container-img">
+                        <img src={window.imageUrl.titleImage} alt=""/>
+                    </ul>
                 </div>
-                <ul className="title-container-img">
-                    <img src={window.imageUrl.titleImage} alt=""/>
-                </ul>
-                <ul>
+                <ul className="shoe-listings">
                     {
-                        this.state.shoes.map(shoe => <ShoeIndexItem 
+                        this.props.shoes.map(shoe => <ShoeIndexItem 
                             shoe={shoe} key={shoe.id}/>)
                     }
                 </ul>

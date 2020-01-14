@@ -2,15 +2,12 @@
     border: 1px solid red;
 }
 
-.shoes-index {
-    display: flex;
-    justify-content: center;
-    background-color: lightgray;
-}
-
 .title-container {
+    background-color: lightgray;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
     margin-top: 3%;
-    margin-left: 15%;
     height: 100%;
     width: 100%;
     text-align: left;
@@ -19,7 +16,18 @@
 
 .title-container-msg {
     margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
+.title-header {
+    font-size: 40px;
+}
+
+.title-msg {
     font-size: 16px;
+    margin-top: 3%;
 }
 
 .title-container-img{
@@ -27,3 +35,9 @@
     width: 35%;
 }
 
+/* --------------------------------------------- */
+/* .shoe-item {
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+} */

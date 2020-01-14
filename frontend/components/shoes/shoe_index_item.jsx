@@ -8,12 +8,12 @@ class ShoeIndexItem extends React.Component {
     render() {
         return (
             <div className="shoe-item">
+                <img src={window.imageUrl.yeezyZebra} alt="" className="shoe-item-img"/>
                 <li className="shoe-item-name">
                     <span>
                         {/* {this.props.shoe.name} */}
                         Shoe Item!!!
                     </span>
-                    <img src="" alt="" className="shoe-item-img"/>
                 </li>
             </div>
         );

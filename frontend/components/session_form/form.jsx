@@ -2,6 +2,7 @@
 // import { login } from '../../actions/session_actions';
 // import { clearErrors } from '../../actions/session_actions';
 import React from 'react';
+// import { withRouter } from 'react-router-dom';
 
 class FormContainer extends React.Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class FormContainer extends React.Component {
         this.handleSignupPasswordBlur = this.handleSignupPasswordBlur.bind(this);
         this.handleSignupEmailBlur = this.handleSignupEmailBlur.bind(this);
         this.handleDemoClick = this.handleDemoClick.bind(this);
+        // this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field) {
@@ -56,14 +58,6 @@ class FormContainer extends React.Component {
         }
     }
 
-    componentDidMount() {
-        console.log('***** comp did mount: ' + window.location);
-        document.getElementsByClassName("header-logo")[0].classList.add("hidden");
-        document.getElementsByClassName("form-header")[0].classList.remove("hidden");
-        document.getElementsByClassName("header-nav")[0].classList.add("hidden");
-        document.getElementsByClassName("search-background")[0].classList.add("hidden");
-    }
-
     // renderErrors() {
     //     return (
     //         <ul>
@@ -75,13 +69,6 @@ class FormContainer extends React.Component {
     //         </ul>
     //     );
     // }
-
-    componentWillUnmount() {
-        document.getElementsByClassName("header-logo")[0].classList.remove("hidden");
-        document.getElementsByClassName("form-header")[0].classList.add("hidden");
-        document.getElementsByClassName("header-nav")[0].classList.remove("hidden");
-        document.getElementsByClassName("search-background")[0].classList.remove("hidden");
-    }
 
     handleLoginSubmit(e) {
         // e.preventDefault();
@@ -171,7 +158,7 @@ class FormContainer extends React.Component {
                     onBlur={this.handleLoginUsernameBlur}
                 />
                 <input 
-                    type="password" 
+                    type="password"
                     placeholder="Password" 
                     defaultValue=''
                     className="form-input"
@@ -219,32 +206,41 @@ class FormContainer extends React.Component {
     render() {
         const { activeTab } = this.state;
         console.log('***** render: ' + JSON.stringify(this.state));
+        if (!(this.props.location.pathname === '/login' || this.props.location.pathname === '/signup')) {
+            return null;
+        }
         return (
-            <div className="form-container">
-                {/* <form onSubmit={this.handleSubmit} className="login-form-box"> */}
-                <div className="login-form-box">
-                    <div className='tabLinks'>
-                        {/* work on disabling button and figure out way to make 
-                        buttons stationary */}
-                        <button id="loginTabLink" className="login-tablink" onClick={this.handleTabClick}>
-                            Log In
-                        </button>
-                        <button id="signupTabLink" className="signup-tablink" onClick={this.handleTabClick}>
-                            Sign Up
-                        </button>
-                    </div>
-                    {/* {this.renderErrors()} */}
+            <div>
+                <header className="form-header-logo">
+                    <a href="/">KickZ</a>
+                    {/* renders auth form logo */}
+                </header>
+                <div className="form-container">
+                    {/* <form onSubmit={this.handleSubmit} className="login-form-box"> */}
+                    <div className="login-form-box">
+                        <div className='tabLinks'>
+                            {/* work on disabling button and figure out way to make 
+                            buttons stationary */}
+                            <button id="loginTabLink" className="login-tablink" onClick={this.handleTabClick}>
+                                Log In
+                            </button>
+                            <button id="signupTabLink" className="signup-tablink" onClick={this.handleTabClick}>
+                                Sign Up
+                            </button>
+                        </div>
+                        {/* {this.renderErrors()} */}
 
-                    <button className="demo-button" onClick={this.handleDemoClick}>
-                        Demo User Login
-                    </button>
-                    {/* get divider line with 'or' after demo button */}
+                        <button className="demo-button" onClick={this.handleDemoClick}>
+                            Demo User Login
+                        </button>
+                        {/* get divider line with 'or' after demo button */}
 
-                    <div className="tabContent">
-                        {activeTab === '#/login' 
-                        ?   this.renderLogin()
-                        :   this.renderSignup()
-                        }
+                        <div className="tabContent">
+                            {activeTab === '#/login' 
+                            ?   this.renderLogin()
+                            :   this.renderSignup()
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

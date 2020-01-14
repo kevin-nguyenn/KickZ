@@ -9,7 +9,10 @@ class ShoeIndexItem extends React.Component {
         return (
             <div className="shoe-item">
                 <li className="shoe-item-name">
-                    <span>{this.props.shoe.name}</span>
+                    <span>
+                        {/* {this.props.shoe.name} */}
+                        Shoe Show Page
+                    </span>
                     <img src="" alt="" className="shoe-item-img"/>
                 </li>
             </div>

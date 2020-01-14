@@ -12,8 +12,8 @@ const mapStateToProps = ({ errors, ownProps }) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        login: (user) => dispatch(login(user)),
-        processForm: (user) => dispatch(signup(user)),
+        // login: (user) => dispatch(login(user)),
+        // processForm: (user) => dispatch(signup(user)),
         clearErrors: () => dispatch(clearErrors())
     };
 };

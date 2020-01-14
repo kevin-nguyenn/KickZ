@@ -14,6 +14,7 @@
         {
             name: "Jordan 1 Retro High Satin Black Toe (W)",
             ticker: "AJ1H-STNBTW"
+            
         },
         {
             name: "Jordan 1 Retro High Obsidian UNC",

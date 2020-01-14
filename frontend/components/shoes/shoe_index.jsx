@@ -5,6 +5,10 @@ import ShoeIndexItem from './shoe_index_item';
 class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            shoes: this.props.shoes
+        }
     }
 
     componentDidMount() {
@@ -12,15 +16,17 @@ class ShoeIndex extends React.Component {
     }
 
     render() {
-        const { shoes } = this.props;
+        // debugger;
+        // const { shoes } = this.props;
         return (
             <div>
-                <li>
+                Shoes Index Page!!!!!!!!!!!!
+                <ul>
                     {
-                        shoes.map(shoe => <ShoeIndexItem 
+                        this.state.shoes.map(shoe => <ShoeIndexItem 
                             shoe={shoe} key={shoe.id}/>)
                     }
-                </li>
+                </ul>
             </div>
         );
     }

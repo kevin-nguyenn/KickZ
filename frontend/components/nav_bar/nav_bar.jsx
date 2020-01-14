@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
@@ -8,6 +8,10 @@ class NavBar extends React.Component {
     }
 
     render() {
+        if (this.props.location.pathname === '/login' || this.props.location.pathname === '/signup' )
+        {
+            return null;
+        }
         
         const showNavLinks = (
             <li>
@@ -62,4 +66,4 @@ class NavBar extends React.Component {
 }
 
 
-export default NavBar;
+export default withRouter(NavBar);

@@ -11,7 +11,7 @@ class ShoeIndexItem extends React.Component {
                 <li className="shoe-item-name">
                     <span>
                         {/* {this.props.shoe.name} */}
-                        Shoe Show Page
+                        Shoe Item!!!
                     </span>
                     <img src="" alt="" className="shoe-item-img"/>
                 </li>

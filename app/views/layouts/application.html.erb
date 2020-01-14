@@ -8,8 +8,19 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
+    <script type="text/javascript">
+      window.imageUrl = {
+        titleImage:  "<%= image_url("browse-sneaker-default.png")%>",
+        yeezyZebra: "<%= image_url("Adidas-Yeezy-Boost-350-V2-Zebra-Product-1.jpg")%>",
+        yeezyLundmark: "<%= image_url("adidas-Yeezy-Boost-350-V2-Lundmark-Product.jpg")%>",
+        yeezyCreamWhite: "<%= image_url("Adidas-Yeezy-Boost-350-V2-Cream-White-1-1.jpg")%>",
+        jordan1Satin: "<%= image_url("Air-Jordan-1-Retro-High-Satin-Black-Toe-W-Product.jpg")%>",
+        jordan1UNC: "<%= image_url("Air-Jordan-1-Retro-High-UNC-Leather.jpg")%>",
+      }
+    </script>
   <body>
     <%= yield %>
   </body>
 </html>
+
+

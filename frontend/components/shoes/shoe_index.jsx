@@ -19,8 +19,16 @@ class ShoeIndex extends React.Component {
         // debugger;
         // const { shoes } = this.props;
         return (
-            <div>
-                Shoes Index Page!!!!!!!!!!!!
+            <div className="shoes-index">
+                <div className="title-container">
+                    Sneakers
+                    <div className="title-container-msg">
+                        On KickZ, every sneaker you want is always available. Buy and sell new sneakers from Air Jordan, Adidas, Nike and more!
+                    </div>
+                </div>
+                <ul className="title-container-img">
+                    <img src={window.imageUrl.titleImage} alt=""/>
+                </ul>
                 <ul>
                     {
                         this.state.shoes.map(shoe => <ShoeIndexItem 

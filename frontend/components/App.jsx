@@ -19,15 +19,15 @@ const App = () => {
                 <NavBarContainer />
             </header>
 
-            <header className="form-header">
+            {/* <header className="form-header"> */}
 
-                <Switch>
-                    <Route exact path="/" component={HomeContainer}/>
-                    <AuthRoute exact path="/login" component={FormContainer} />
-                    <AuthRoute exact path="/signup" component={FormContainer}/>
-                    <Route exact path="/shoes" component={ShoeIndexContainer}/>
-                </Switch>
-            </header>
+            <Switch>
+                <Route exact path="/" component={HomeContainer}/>
+                <AuthRoute exact path="/login" component={FormContainer} />
+                <AuthRoute exact path="/signup" component={FormContainer}/>
+                <Route exact path="/shoes" component={ShoeIndexContainer}/>
+            </Switch>
+            {/* </header> */}
         </div>
     )
 };

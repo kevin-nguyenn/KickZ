@@ -4,7 +4,6 @@ import { fetchShoes } from '../../actions/shoe_actions';
 import ShoeIndex from './shoe_index';
 
 const mSTP = (state) => {
-    console.log(state, 'shoes');
     return ({shoes: Object.values(state.entities.shoes)})
 };
 

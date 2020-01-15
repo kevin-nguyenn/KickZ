@@ -11,6 +11,6 @@
 # end
 
 json.array! @shoes do |shoe|
-    json.extract! shoe, :id, :name
+    json.extract! shoe, :id, :name, :price
     json.photoUrl url_for(shoe.photo)
 end

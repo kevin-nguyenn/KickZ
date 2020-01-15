@@ -32,17 +32,23 @@ class ShoeIndex extends React.Component {
                         <img src={window.imageUrl.titleImage} alt=""/>
                     </ul>
                 </div>
-                <ul className="shoe-listings">
-                    {
-                        this.props.shoes.map((shoe) => {
-                        return (
-                            <Link to={`/shoes/${shoe.id}`}>
-                                <ShoeIndexItem shoe={shoe} key={shoe.id}/>
-                            </Link>
-                            )
-                        })
-                    }
-                </ul>
+                <div className="index-container">
+                    <div className="index-filters">
+                        filters
+                    </div>
+                    <ul className="shoe-listings">
+                        {
+                            this.props.shoes.map((shoe) => {
+                            return (
+                                <Link to={`/shoes/${shoe.id}`}>
+                                    <ShoeIndexItem shoe={shoe} key={shoe.id}/>
+                                </Link>
+                                )
+                            })
+                        }
+                    </ul>
+
+                </div>
             </div>
         );
     }

@@ -7,13 +7,20 @@ class ShoeIndexItem extends React.Component {
     }
 
     render() {
+        // if (this.props.shoes === undefined) return null;
         return (
             <div className="shoe-item">
-                <img src={window.imageUrl.yeezyZebra} alt="" className="shoe-item-img"/>
-                <li className="shoe-item-name">
-                    <span>
-                        {/* {this.props.shoe.name} */}
-                        Shoe Item!!!
+                <li className="shoe-item-display">
+                    <div className="shoe-item-img">
+                        <img src={this.props.shoe.photoUrl} 
+                            alt="" className="shoe-item-img"
+                        />
+                    </div>
+                    <span className="shoe-item-name">
+                        {this.props.shoe.name} 
+                        <br/>
+                        ${this.props.shoe.price}
+                        {/* Shoe Item!!! */}
                     </span>
                 </li>
             </div>

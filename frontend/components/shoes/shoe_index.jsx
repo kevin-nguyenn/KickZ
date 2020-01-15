@@ -34,7 +34,8 @@ class ShoeIndex extends React.Component {
                 </div>
                 <div className="index-container">
                     <div className="index-filters">
-                        filters
+                        filters!!!!!
+                        
                     </div>
                     <ul className="shoe-listings">
                         {

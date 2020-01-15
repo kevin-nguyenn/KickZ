@@ -13,14 +13,13 @@ class ShoeIndexItem extends React.Component {
                 <li className="shoe-item-display">
                     <div className="shoe-item-img">
                         <img src={this.props.shoe.photoUrl} 
-                            alt="" className="shoe-item-img"
+                            alt="" className="shoe-item-pic"
                         />
                     </div>
                     <span className="shoe-item-name">
                         {this.props.shoe.name} 
                         <br/>
                         ${this.props.shoe.price}
-                        {/* Shoe Item!!! */}
                     </span>
                 </li>
             </div>

@@ -37,38 +37,34 @@
 
 /* --------------------------------------------- */
 .index-container {
-    display: flex;  
+    display: flex;
+    margin-top: 5%;
 }
 
 .shoe-listings {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    margin: 0% 20% 0%;
     text-decoration: none;
-}
-
-.shoe-item {
-    margin-top: 10%;
 }
 
 .shoe-item-display {
     display: inline-block;
-    width: 50%;
-    border: 2px solid black;
-    /* background-color: lightgray; */
-    /* text-decoration: none; */
-    /* border-width: 2px; */
-    /* border-style: solid; */
-    /* border-radius: 3px; */
+    width: 150px;
+    height: 215px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    background-color: lightgray;
 }
 
-.shoe-item-img {
-    /* border: 2px solid lightgray; */
-    width: 100%;
-    /* height: 180%; */
+.shoe-item-pic {
+    /* float:  right; */
+    width:  150px;
+    height: 110px;
+    background-size: cover;
 }
 
 .shoe-item-name {
     color: black;
     font-size: 20px;
-    /* background-color: lightgray; */
 }

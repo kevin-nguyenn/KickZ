@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import ShoeIndexItem from './shoe_index_item';
 
@@ -33,8 +34,13 @@ class ShoeIndex extends React.Component {
                 </div>
                 <ul className="shoe-listings">
                     {
-                        this.props.shoes.map(shoe => <ShoeIndexItem 
-                            shoe={shoe} key={shoe.id}/>)
+                        this.props.shoes.map((shoe) => {
+                        return (
+                            <Link to={`/shoes/${shoe.id}`}>
+                                <ShoeIndexItem shoe={shoe} key={shoe.id}/>
+                            </Link>
+                            )
+                        })
                     }
                 </ul>
             </div>

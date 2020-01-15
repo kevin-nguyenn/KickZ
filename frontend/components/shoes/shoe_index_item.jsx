@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class ShoeIndexItem extends React.Component {
     constructor(props) {
@@ -20,4 +21,4 @@ class ShoeIndexItem extends React.Component {
     }
 };
 
-export default ShoeIndexItem;
+export default withRouter(ShoeIndexItem);

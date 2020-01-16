@@ -29,9 +29,9 @@ const App = () => {
                 </Switch>
             </main>
 
-            {/* <footer>
+            <footer>
                 <Footer />
-            </footer> */}
+            </footer>
         </div>
     )
 };

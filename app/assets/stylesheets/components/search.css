@@ -1,5 +1,4 @@
 .search-container {
-    /* object-fit: cover; */
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -25,11 +24,6 @@
     color: white;
     display: flex;
     justify-content: center;
-    /* position: absolute; */
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
     /* align-content: flex-end; */
 }
 
@@ -40,10 +34,6 @@
     display: flex;
     justify-content: center;
     /* margin: 1% 34% 1%; */
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
 }
 
 .search-bar {
@@ -55,4 +45,8 @@
     left: 50%;
     top: 115%;
     transform: translate(-50%, -50%);
+}
+
+.filler {
+    height: 650px;
 }

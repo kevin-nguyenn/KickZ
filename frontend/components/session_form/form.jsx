@@ -209,6 +209,7 @@ class FormContainer extends React.Component {
         if (!(this.props.location.pathname === '/login' || this.props.location.pathname === '/signup')) {
             return null;
         }
+        
         return (
             <div>
                 <header className="form-header-logo">

@@ -2,13 +2,15 @@ import React from 'react';
 
 class Home extends React.Component {
     render() {
+        if (!(this.props.location.pathname === '/')) {
+            return null;
+        }
+
         return (
             <div className="search-container">
-                {/* renders greeting text and search bar
-                need to move this out to search folder later */}
                 <div className="search-background">
                     <span className="background">
-                        <img src={window.imageUrl.homeImage} alt="" className="background-pic"/>
+                        {/* <img src={window.imageUrl.homeImage} alt="" className="background-pic"/> */}
                         <div className="search-bar">
                             <div className="word-set1">Buy and Sell</div>
                             <div className="word-set2">Authentic Sneakers</div>

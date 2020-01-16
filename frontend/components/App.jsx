@@ -21,17 +21,17 @@ const App = () => {
                 </header>
 
                 <Switch>
-                    <Route exact path="/" component={HomeContainer}/>
                     <AuthRoute exact path="/login" component={FormContainer} />
                     <AuthRoute exact path="/signup" component={FormContainer}/>
                     <Route exact path="/shoes" component={ShoeIndexContainer}/>
                     <Route path="/shoes/:shoeId" component={ShoeDetailContainer}/> 
+                    <Route exact path="/" component={HomeContainer}/>
                 </Switch>
             </main>
 
-            <footer>
+            {/* <footer>
                 <Footer />
-            </footer>
+            </footer> */}
         </div>
     )
 };

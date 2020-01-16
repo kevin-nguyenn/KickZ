@@ -5,12 +5,12 @@ const Footer = () => {
         <section className="footer-container">
             <ul className="footer-list">
                 <li className="footer-icon-container">
-                    <a href="https://www.linkedin.com/in/kevin-nguyen-1583ab19b/">
+                    <a href="https://www.linkedin.com/in/kevin-nguyen-1583ab19b/" className="fa linkedin" target="_blank">
                         <i className="fab fa-linkedin"></i>
                     </a>
                 </li>
                 <li className="footer-icon-container">
-                    <a href="https://github.com/kevin-nguyenn">
+                    <a href="https://github.com/kevin-nguyenn" className="fa github" target="_blank">
                         <i className="fab fa-github"></i>
                     </a>
                 </li>
@@ -22,7 +22,7 @@ const Footer = () => {
                     and watches.
                     <br/>
                     Follow the link below to visit the original site.
-                    <a href="https://stockx.com/">
+                    <a href="https://stockx.com/" target="_blank">
                         <button className="footer-link-button">
                             Visit StockX
                         </button>

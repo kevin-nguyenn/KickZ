@@ -1,0 +1,92 @@
+.form-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+
+.login-form-box {
+    background: #fff;
+    border: solid 1px #e0e0e0;
+    border-radius: 4px;
+    width: 398px;
+    height: 550px;
+    text-align: center;
+}
+
+.form-header-logo a{
+    display: flex;
+    font-weight: 700;
+    color: red;
+    font-size: 40px;
+    justify-content: center;
+    text-shadow: 1px 2px 3px #000000;
+    text-decoration: none;
+}
+
+.form-input {
+    display: flex;
+    width: 328px;
+    height: 23px;
+    background: #FFFFFF;
+    margin: 15px 22.5px;
+    padding: 16px 10px 5px;
+    font-size: 16px;
+    font-weight: 250;
+    font-family: 'proxima-nova', sans-serif;
+}
+
+.tabContent {
+    padding-top: 10%;
+}
+
+.loginContent, .signupContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    /* padding: 50px 25px 25px; */
+    display: flex;
+    justify-content: center;
+    margin-top: 38%;
+}
+
+.demo-button {
+    width: 349px;
+    height: 50px;
+    font-size: 14px;
+    background-color: #3b5998;
+    color: #FFFFFF;
+    border-radius: 2px;
+}
+
+.form-submit {
+    width: 349px;
+    font-size: 18px;
+    height: 20%;
+    margin-left: 6%;
+}
+
+.tabLinks {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px 20px;
+}
+
+.login-tablink {
+    border-width: 0px;
+    border-bottom: 2px solid #010101;
+    height: 50px;
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+}
+
+.signup-tablink {
+    border-width: 0px;
+    border-bottom: 2px solid #010101;
+    height: 50px;
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+}

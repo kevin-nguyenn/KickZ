@@ -10,7 +10,7 @@ class ShoeIndexItem extends React.Component {
         // if (this.props.shoes === undefined) return null;
         return (
             <div className="shoe-item">
-                <li className="shoe-item-display">
+                <li className="shoe-item-display" >
                     <div className="shoe-item-img">
                         <img src={this.props.shoe.photoUrl} 
                             alt="" className="shoe-item-pic"

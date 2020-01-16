@@ -16,6 +16,9 @@ class ShoeIndex extends React.Component {
         // const { shoes } = this.props;
         // if (this.props.shoes === undefined) return null;
         // debugger;
+        if (this.props.shoes[key] < 0) {
+            
+        }
 
         return (
             <div className="shoes-index">
@@ -39,10 +42,11 @@ class ShoeIndex extends React.Component {
                     </div>
                     <ul className="shoe-listings">
                         {
-                            this.props.shoes.map((shoe) => {
+                            Object.keys(this.props.shoes).map((key) => {
+                                //************FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!
                             return (
-                                <Link to={`/shoes/${shoe.id}`} key={shoe.id}>
-                                    <ShoeIndexItem shoe={shoe} key={shoe.id}/>
+                                <Link to={`/shoes/${parseInt(key)}`} key={key}>
+                                    <ShoeIndexItem shoe={this.props.shoes[key]} key={key}/>
                                 </Link>
                                 )
                             })

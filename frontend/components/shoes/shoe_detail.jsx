@@ -14,9 +14,11 @@ class ShoeDetail extends React.Component {
         if (this.props.shoe === undefined) return null;
 
         return (
-            <section>
-                shoe details
-                <div>{this.props.shoe.name}</div>
+            <section className="shoe-detail-container">
+                {/* shoe details */}
+                <div className="shoe-detail-name">
+                    {this.props.shoe.name}
+                </div>
                 <div className="shoe-detail-img-container">
                     <img src={this.props.shoe.photoUrl} alt="" 
                         className="shoe-detail-img"

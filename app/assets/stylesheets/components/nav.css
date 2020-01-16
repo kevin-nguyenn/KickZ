@@ -12,6 +12,8 @@
     position: fixed;
     left: 0;
     top: 0;
+    margin-top: 3%;
+    margin-left: 7%;
 }
 
 .header-nav {
@@ -26,11 +28,10 @@
     font-size: 18px;
     list-style-type: none;
     text-align: center;
-    margin-top: 5%;
 }
 
 .header-list li{
-    padding: 2px;
+    padding: 10px;
 }
 
 .nav-links {
@@ -38,6 +39,8 @@
     position: fixed;
     right: 0;
     top: 0;
+    margin-top: 3%;
+    margin-right: 7%;
 }
 
 .nav-link-item  a{

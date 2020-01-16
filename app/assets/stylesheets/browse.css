@@ -43,7 +43,7 @@
 
 .shoe-listings {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     margin: 0% 20% 0%;
     text-decoration: none;
 }

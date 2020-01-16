@@ -35,13 +35,13 @@ class ShoeIndex extends React.Component {
                 <div className="index-container">
                     <div className="index-filters">
                         filters!!!!!
-                        
+
                     </div>
                     <ul className="shoe-listings">
                         {
                             this.props.shoes.map((shoe) => {
                             return (
-                                <Link to={`/shoes/${shoe.id}`}>
+                                <Link to={`/shoes/${shoe.id}`} key={shoe.id}>
                                     <ShoeIndexItem shoe={shoe} key={shoe.id}/>
                                 </Link>
                                 )

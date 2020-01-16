@@ -1,5 +1,3 @@
 json.shoe do
-    if shoe.photo.attached?
-        json.photoUrl url_for(shoe.photo)
-    end
+    json.partial! 'api/shoes/shoe', shoe: @shoe
 end

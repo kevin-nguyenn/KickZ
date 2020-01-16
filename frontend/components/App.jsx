@@ -8,27 +8,30 @@ import NavBarContainer from "./nav_bar/nav_bar_container";
 import ShoeIndexContainer from './shoes/shoe_index_container'
 import FormContainer from './session_form/form';
 import HomeContainer from './home/home_container';
-// import { signup } from "../util/session_api_util";
-
+import ShoeDetailContainer from './shoes/shoe_detail_container';
+import Footer from './footer/footer';
 
 const App = () => {
     
     return (
         <div>
-            <header className="nav-container">
-                <NavBarContainer />
-            </header>
+            <main className="main-content-container">
+                <header className="nav-container">
+                    <NavBarContainer />
+                </header>
 
-            {/* <header className="form-header"> */}
+                <Switch>
+                    <Route exact path="/" component={HomeContainer}/>
+                    <AuthRoute exact path="/login" component={FormContainer} />
+                    <AuthRoute exact path="/signup" component={FormContainer}/>
+                    <Route exact path="/shoes" component={ShoeIndexContainer}/>
+                    <Route path="/shoes/:shoeId" component={ShoeDetailContainer}/> 
+                </Switch>
+            </main>
 
-            <Switch>
-                <Route exact path="/" component={HomeContainer}/>
-                <AuthRoute exact path="/login" component={FormContainer} />
-                <AuthRoute exact path="/signup" component={FormContainer}/>
-                <Route exact path="/shoes" component={ShoeIndexContainer}/>
-                {/* <Route path="/shoes/:shoeId" component={}/> */} 
-            </Switch>
-            {/* </header> */}
+            <footer>
+                <Footer />
+            </footer>
         </div>
     )
 };

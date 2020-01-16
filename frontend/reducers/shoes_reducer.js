@@ -12,7 +12,7 @@ const shoesReducer = (oldState = {}, action) => {
 
         case RECEIVE_SHOE:
             const shoe = action.shoe;
-            return Object.assign({}, state, { [shoe.id]: shoe });
+            return Object.assign({}, oldState, { [shoe.id]: shoe });
     
         default:
             return oldState;

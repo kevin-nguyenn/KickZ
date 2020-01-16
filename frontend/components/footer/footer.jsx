@@ -5,18 +5,18 @@ const Footer = () => {
         <section className="footer-container">
             <ul className="footer-list">
                 <li className="footer-icon-container">
-                    <a href="">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/kevin-nguyen-1583ab19b/">
+                        <i className="fab fa-linkedin"></i>
                     </a>
                 </li>
                 <li className="footer-icon-container">
-                    <a href="">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/kevin-nguyenn">
+                        <i className="fab fa-github"></i>
                     </a>
                 </li>
             </ul>
             <div className="stockx-link-container">
-                <p>
+                <p id="stockx-link-cta">
                     KickZ is a clone of STOCKX.com, the global destination for 
                     Live marketplace for exclusive sneakers, streetwear, handbags 
                     and watches.

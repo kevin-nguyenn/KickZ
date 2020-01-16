@@ -22,7 +22,7 @@ class ShoeIndex extends React.Component {
                 <div className="title-container">
                     <div className="title-container-msg">
                         <span className="title-header">
-                            Sneakers
+                            SNEAKERS
                         </span>
                         <span className="title-msg">
                             On KickZ, every sneaker you want is always available. Buy and sell new sneakers from Air Jordan, Adidas, Nike and more!

@@ -2,7 +2,7 @@
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url("../images/sneaker_plain.jpeg");
+    background-image: url("https://kickz-seed.s3.us-west-1.amazonaws.com/sneaker_plain.jpeg?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA4aCXVzLXdlc3QtMSJHMEUCIQCsv81a9yNsdqbRNW0BUQ80OAXOC27uxd73n8Mp%2FY3b6AIgMQ1TDVQF4T%2BoyxrQ5%2BV2IcoSCM%2FBT5XEDtjDggdPqsMqlgIIl%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw5MTM1MjI2MTY3NDkiDKqBK1Uz6PT7LswOhyrqAVcpIHppnLVAvbnoTeEbhnQT94JAslukOt1gbZjB%2F6w8ecJrJfDWufsbuPnk776b5tT%2B2TH7FXda7VuJok2NxDXDphbYW1CpgqqB7OnoQkKNWbBBoAUO7yRZk8NPk%2BSqNgsoPWTIS0rJYv8LMq7u5SiYD3WDXHY0P9K6fvW%2Bxb%2Buy5ujD6wa9VKBLNA%2B%2BqaO7NLuWvmzlUZ220AmwAhTX4BgoNenA3SerPm4Fd5kKBHhvJIKTcjJb31p2LEsEs0Snx%2FLfiMNNk4I7ghUqxy1Y5rBZEZHpTlzUk6rCiUommHiLvWyI%2FwYA7qK9jD5uoPxBTqCA8DKCI8u0dxF%2FrXWaKcRS3ANwsXpXJpO1SYMYyzCwJnK0ust3tNQW4vRSqfALCgb96prGuhB4VMZdRsqPldutf1SJLkWN%2BKxsRTfoODJ4SojgyhqJSZ%2FNWI052e5IbnQXvaOyAzCdXzHqcVLidTk73L5P4rgTkWd5SC%2B%2BG06jAFl%2F2Ke7WmnNW4vILreS1h8f5SqSMwv62vBWKoaZsPAB8YbR5A6bR3FOrfR3eZtskuR52TRpcGTt1pGDkF%2FLB%2FKb1QGsBDLsaVjKhgEk6ui%2FhwfKbOGoOdWR1FMQsJNObwsS5QYUN9AqwnLLwCuifixH8MwrkeSM0WeQN%2FHRjaWEkIh6A2g%2FnoiRYB60bUkIMD0nA9ydKQBKKLWzv%2BUt%2FrKy5T%2FB5ABkylFO5tfQ0CR2i1e7WkjurLfQvzncu7UP%2BsAJlNcPPXmwiz5DA36RQCgSGfZoIPMD8pT47V3uOGqClxH6IRUuxuxPo0lEPUPDPjS1%2FMJeLoY6ewd2p8GrIpAWEI0&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200117T012250Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIA5JMRQ5GWZMFMGSP5%2F20200117%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Signature=45ae54d43bf4988d9ce28517ec921d6db49f00ccfbdcf518ada42c4a56ce5fc6");
     height: 500px;
     width: 100%;
     position: absolute;

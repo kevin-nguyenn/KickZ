@@ -16,9 +16,6 @@ class ShoeIndex extends React.Component {
         // const { shoes } = this.props;
         // if (this.props.shoes === undefined) return null;
         // debugger;
-        if (this.props.shoes[key] < 0) {
-            
-        }
 
         return (
             <div className="shoes-index">

@@ -1,24 +1,39 @@
-# README
+# Kickz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img src="https://imgur.com/A5ExMcP"></img>
 
-Things you may want to cover:
+Visit: <a href="https://kickz-appacademy.herokuapp.com/#/">KickZ</a>
 
-* Ruby version
+## Motivation
+The inspiration for KickZ comes from personal interest in sneakers and streetware.  KickZ is a clone of the website StockX. Please visit the official <a href="https://stockx.com/">StockX</a> website for reference.
 
-* System dependencies
+## Features
+* User authentication
+  * Users have ability to log in / sign up / or use demo-login
+  * Demo login allows users to explore website without needing to sign up
+  
+* Graph Pricing
+  * Shoes have graphs of pricing history
+    * Viewing can be set to past month / 3 months / 6 months / year / YTD
+    * Displays average price of the shoe
+    * Number of sales
+  * Users can toggle graph to search in certain time periods for shoe pricing history
+  * Users have the ability to interact with each shoe's pricing graph with their mouse
 
-* Configuration
+## Technologies Used
 
-* Database creation
+* Backend:
+  * Ruby on Rails
+  * PostgreSQL 
+  
+* Frontend:
+  * React
+  * Redux
+  
+* Production:
+  * Amazon Web Services(AWS)
+  * Heroku
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Release History
+* 0.0.1
+  * Work in progress

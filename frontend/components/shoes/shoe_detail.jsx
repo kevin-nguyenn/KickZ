@@ -16,9 +16,15 @@ class ShoeDetail extends React.Component {
         return (
             <section className="shoe-detail-container">
                 {/* shoe details */}
-                <div className="shoe-detail-name">
-                    {this.props.shoe.name}
-                </div>
+                <header>{this.props.shoe.name}</header>
+                <span className="shoe-detail-misc">
+                    <span className="shoe-detail-condition">Condition:
+                        <p style={{color: 'green'}}>New</p>
+                    </span> |
+                    <span className="shoe-detail-authenticity">
+                        <p style={{color: 'green'}}>100% Authentic</p>
+                    </span>
+                </span>
                 <div className="shoe-detail-img-container">
                     <img src={this.props.shoe.photoUrl} alt="" 
                         className="shoe-detail-img"
@@ -30,3 +36,11 @@ class ShoeDetail extends React.Component {
 };
 
 export default ShoeDetail;
+
+{/* <span id="prod-show-misc">
+    <span id="prod-show-condition">
+        Condition: <p style={{ color: 'green' }}>New</p>
+    </span> | <span id="prod-show-authenticity">
+        <p style={{ color: 'green' }}>100% Authentic</p>
+    </span>
+</span> */}

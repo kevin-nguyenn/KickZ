@@ -1,6 +1,6 @@
 import { RECEIVE_PRODUCT, RECEIVE_PRODUCT_ERRORS } from '../../actions/shoe_actions';
 
-export default (state = _cleanErrors, action) => {
+export default (state = [], action) => {
     Object.freeze(state);
     
     switch (action.type) {

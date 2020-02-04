@@ -1,13 +1,13 @@
-import { RECEIVE_PRODUCT, RECEIVE_PRODUCT_ERRORS } from '../../actions/shoe_actions';
+import { RECEIVE_SHOE, RECEIVE_SHOE_ERRORS } from '../../actions/shoe_actions';
 
 export default (state = [], action) => {
     Object.freeze(state);
     
     switch (action.type) {
-        case RECEIVE_PRODUCT_ERRORS:
+        case RECEIVE_SHOE_ERRORS:
             return action.errors;
 
-        case RECEIVE_PRODUCT:
+        case RECEIVE_SHOE:
             return [];
 
         default:

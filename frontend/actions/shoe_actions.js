@@ -30,7 +30,7 @@ export const fetchShoe = (id) => dispatch => {
         .then(shoe => dispatch(receiveShoe(shoe)));
 };
 
-export const updateProduct = shoe => dispatch => {
+export const updateShoe = shoe => dispatch => {
     return ShoeAPIUtil.updateShoe(shoe)
     .then(p => dispatch(receiveShoe(p)), errors => dispatch(receiveShoeErrors(errors.responseJSON)));
 };

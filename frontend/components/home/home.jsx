@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ShoeIndex from '../shoes/shoe_index'
+
 class Home extends React.Component {
     render() {
 
@@ -17,7 +19,12 @@ class Home extends React.Component {
                         </span>
                     </div>
                 </div>
+
                 <div className="filler">
+                </div>
+
+                <div className="">Most Popular
+                    {/* <ShoeIndex /> */}
                 </div>
             </div>
         );

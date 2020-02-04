@@ -36,11 +36,3 @@ class ShoeDetail extends React.Component {
 };
 
 export default ShoeDetail;
-
-{/* <span id="prod-show-misc">
-    <span id="prod-show-condition">
-        Condition: <p style={{ color: 'green' }}>New</p>
-    </span> | <span id="prod-show-authenticity">
-        <p style={{ color: 'green' }}>100% Authentic</p>
-    </span>
-</span> */}

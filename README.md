@@ -1,6 +1,6 @@
 # Kickz
 
-<img src="https://imgur.com/A5ExMcP"></img>
+![alt_text](https://i.imgur.com/A5ExMcP.png?2)
 
 Visit: <a href="https://kickz-appacademy.herokuapp.com/#/">KickZ</a>
 

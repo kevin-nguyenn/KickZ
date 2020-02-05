@@ -9,7 +9,7 @@ class ShoeIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchShoes();
+        this.props.fetchShoes().then(action => this.setState({ shoes: action.shoes }));
     }
 
     render() {

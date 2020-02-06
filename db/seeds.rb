@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+# demo_user = User.create(username: "demouser", email: "demouser@kickz.io", password: "password")
+# Add brand column to shoes table & add brands to each shoe data
+
 # Jordan 1
     #array of shoe objects
 

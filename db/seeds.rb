@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-# demo_user = User.create(username: "demouser", email: "demouser@kickz.io", password: "password")
+demo_user = User.create(username: "demouser", email: "demouser@kickz.io", password: "password")
 # Add brand column to shoes table & add brands to each shoe data
 
 # Jordan 1
@@ -17,12 +17,14 @@ require 'open-uri'
         {
             name: "Jordan 1 Retro High Satin Black Toe (W)",
             ticker: "AJ1H-STNBTW",
-            price: 485
+            price: 485,
+            brand: "Jordan"
         },
         {
             name: "Jordan 1 Retro High Obsidian UNC",
             ticker: "AJ1H-UNCL",
-            price: 272
+            price: 272,
+            brand: "Jordan"
         }
     ]
 
@@ -32,17 +34,20 @@ require 'open-uri'
         {
             name: "adidas Yeezy Boost 350 V2 Lundmark",
             ticker: "350V2-LM",
-            price: 284
+            price: 284,
+            brand: "Yeezy"
         },
         {
             name: "adidas Yeezy Boost 350 V2 Cream/Triple White",
             ticker: "YZY350V2-CRMWHT",
-            price: 294
+            price: 294,
+            brand: "Yeezy"
         },
         {
             name: "adidas Yeezy Boost 350 V2 Zebra",
             ticker: "YZY350V2-ZEBRA",
-            price: 295
+            price: 295,
+            brand: "Yeezy"
         }
     ]
 

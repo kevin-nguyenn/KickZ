@@ -20,7 +20,10 @@ class ShoeDetail extends React.Component {
                 <span className="shoe-detail-misc">
                     <span className="shoe-detail-condition">Condition:
                         <p style={{color: 'green'}}>New</p>
-                    </span> |
+                    </span>|
+                    <span className="shoe-detail-ticker">Ticker:
+                        <p style={{color: 'black'}}>{this.props.shoe.ticker}</p>
+                    </span>|
                     <span className="shoe-detail-authenticity">
                         <p style={{color: 'green'}}>100% Authentic</p>
                     </span>

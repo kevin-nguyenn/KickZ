@@ -2,8 +2,13 @@
     border: 1px solid red;
 } */
 
+.shoes-index {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 16px;
+}
+
 .title-container {
-    background-color: lightgray;
+    background-color: #ececec;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
@@ -23,16 +28,31 @@
 
 .title-header {
     font-size: 40px;
+    font-family: BebasNeue;
+    line-height: 1.1;
 }
 
 .title-msg {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 3%;
 }
 
 .title-container-img{
     height: 100%;
     width: 35%;
+}
+
+/* ---------------------------------------------- */
+/* Filter options start here */
+.filter-options {
+    display: block;
+    box-sizing: border-box;
+    font-family: 'proxima-nova', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #333;
 }
 
 /* --------------------------------------------- */

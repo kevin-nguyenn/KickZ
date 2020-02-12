@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import ShoeIndexItem from './shoe_index_item';
 
 class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            shoes: this.props.shoes
+        }
     }
 
     componentDidMount() {
@@ -16,6 +19,8 @@ class ShoeIndex extends React.Component {
         // const { shoes } = this.props;
         // if (this.props.shoes === undefined) return null;
         // debugger;
+        let shoes = Object.values(this.state.shoes);
+
 
         return (
             <div className="shoes-index">
@@ -34,19 +39,19 @@ class ShoeIndex extends React.Component {
                 </div>
                 <div className="index-container">
                     <div className="index-filters">
-                        filters!!!!!
-
+                        <div className="filter-options">
+                            <div>Sneakers</div>
+                            <br/><br/>
+                            <div>Yeezy</div>
+                            <div>Jordan</div>
+                            <div>Nike</div>
+                        </div>
                     </div>
                     <ul className="shoe-listings">
                         {
-                            Object.keys(this.props.shoes).map((key) => {
-                                //************FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!
-                            return (
-                                <Link to={`/shoes/${parseInt(key)}`} key={key}>
-                                    <ShoeIndexItem shoe={this.props.shoes[key]} key={key}/>
-                                </Link>
-                                )
-                            })
+                            shoes.map((shoe, i) => (
+                                <ShoeIndexItem shoe={shoe} key={i} />
+                            ))
                         }
                     </ul>
 

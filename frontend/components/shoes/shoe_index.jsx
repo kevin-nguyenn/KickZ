@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import ShoeIndexItem from './shoe_index_item';
 
@@ -49,19 +48,10 @@ class ShoeIndex extends React.Component {
                         </div>
                     </div>
                     <ul className="shoe-listings">
-                        {/* {
-                            Object.keys(this.props.shoes).map((key) => {
-                                //************FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!
-                            return (
-                                <Link to={`/shoes/${parseInt(key)}`} key={key}>
-                                    <ShoeIndexItem shoe={this.props.shoes[key]} key={key}/>
-                                </Link>
-                                )
-                            })
-                        } */
-                        shoes.map(shoe => (
-                            <ShoeIndexItem shoe={shoe} key={`shoe${shoe.id}`} />
-                        ))
+                        {
+                            shoes.map((shoe, i) => (
+                                <ShoeIndexItem shoe={shoe} key={i} />
+                            ))
                         }
                     </ul>
 

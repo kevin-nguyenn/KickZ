@@ -11,7 +11,7 @@ export const receiveWathlists = (watchlists) => ({
 
 export const receiveWathlist = (watchlist) => ({
     type: RECEIEVE_WATCHLIST,
-    watshlist
+    watchlist
 });
 
 export const receiveWathlistsErrors = errors => ({

@@ -11,7 +11,7 @@ export const receiveWathlists = (watchlists) => ({
 
 export const receiveWathlist = (watchlist) => ({
     type: RECEIEVE_WATCHLIST,
-    wathclist
+    watshlist
 });
 
 export const receiveWathlistsErrors = errors => ({
@@ -21,7 +21,7 @@ export const receiveWathlistsErrors = errors => ({
 
 export const fetchWatchlists = () => dispatch => {
     return WatchlistAPIUtil.fetchWathclists()
-        .then((wathclists) => dispatch(receiveWatchlists(wathclists)));
+        .then((watshlists) => dispatch(receiveWatchlists(watshlists)));
 };
 
 export const fetcWatchlist = (id) => dispatch => {

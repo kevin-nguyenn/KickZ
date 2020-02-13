@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { updateUser, removeUser } from '../../actions/user_actions';
 
-import Profile from './profile';
+import ProfileShow from './profile_show';
 
 const mapStateToProps = (state) => ({
     currentUser: state.entities.currentUser
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
     removeUser: (id) => dispatch(removeUser(id)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileShow);

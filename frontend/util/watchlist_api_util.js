@@ -27,3 +27,18 @@ export const updateWatchlist = (watchlist) => (
         data: { watchlist }
     })
 );
+
+export const addItem = (id, item) => (
+    $.ajax({
+        method: 'POST',
+        url: `/api/users/${id}/watchlist`,
+        data: { item }
+    })
+);
+
+export const removeItem = (id) => (
+    $.ajax({
+        method: 'DELETE',
+        url: `/api/watchlist/${id}`
+    })
+);

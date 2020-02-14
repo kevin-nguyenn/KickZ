@@ -14,8 +14,10 @@ class Profile extends React.Component {
             <ProfileNavContainer/>
             <div className="profile-contents">
                 <Route exact path="/profile" component={ProfileShowContainer} />
-                <ProtectedRoute/>
+                <ProtectedRoute />
             </div>
         </div>
     }
 }
+
+export default Profile;

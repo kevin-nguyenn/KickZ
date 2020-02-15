@@ -24,11 +24,13 @@ class NavBar extends React.Component {
                 { showNavLinks }
                 <div className="nav-dropdown">
                     <li>
-                        <span className="nav-link-item"><Link to="/">My Account</Link></span>
+                        <span className="nav-link-item"><Link to="/profile">My Account</Link></span>
                     </li>
                     <div className="nav-dropdown-items">
                         <a href="#">Buying</a>
                         <a href="#">Selling</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Following</a>
                         <a href="#">Portfolio</a>
                         <a href="#" onClick={this.props.logout}>Logout</a>
                     </div>

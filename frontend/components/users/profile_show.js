@@ -8,7 +8,7 @@ class ProfileShow extends React.Component {
     render() {
         return (
             <div>
-                <p>Hi, {this.props.currentUser.name}</p>
+                <p>Hi, {this.props.currentUser.username}</p>
             </div>
         )
     }

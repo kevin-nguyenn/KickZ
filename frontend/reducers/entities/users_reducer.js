@@ -5,11 +5,7 @@ const usersReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER || RECEIVE_USER:
-            if (action.user){
-                Object.assign({}, oldState, action.user);
-            } else {
-                return state;
-            }
+            return Object.assign({}, oldState, { [action.currentUser.id]: action.currentUser });
 
         case DELETE_USER:
             return {};

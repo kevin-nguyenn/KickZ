@@ -14,4 +14,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
     fetchWatchlists: () => dispatch(fetchWatchlists())
-})
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)();

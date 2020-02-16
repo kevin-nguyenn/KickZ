@@ -17,7 +17,7 @@ class Profile extends React.Component {
             <div className="profile">
                 <ProfileNavContainer selected={this.selected} />
                 <div className="profile-contents">
-                    {/* <Route exact path="/profile" component={ProfileShowContainer} /> */}
+                    <Route exact path="/profile" component={ProfileShowContainer} />
                     {/* <ProtectedRoute /> */}
                 </div>
             </div>

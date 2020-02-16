@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ProfileShow extends React.Component {
+class Watchlist extends React.Component {
     constructor(props) {
         super(props)
     };
@@ -8,10 +8,10 @@ class ProfileShow extends React.Component {
     render() {
         return (
             <div>
-                <p>Hi, {this.props.currentUser}</p>
+
             </div>
         )
     }
 };
 
-export default ProfileShow;
+export default Watchlist

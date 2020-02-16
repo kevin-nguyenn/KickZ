@@ -6,7 +6,8 @@ const mapStateToProps = (state) => ({
     currentUser: state.entities.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-});
+const mapDispatchToProps = (dispatch) => {
+    return ({});
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile);

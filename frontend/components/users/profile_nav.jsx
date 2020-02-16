@@ -4,24 +4,38 @@ import { Link } from 'react-router-dom';
 class ProfileNav extends React.Component {
     constructor(props) {
         super(props);
+
+        this.changeSelected = this.changeSelected.bind(this);
+    }
+
+    componentDidMount() {
+        $(document.getElementById(`prof-nav-${this.props.selected}`)).addClass('profile-selected');
+    }
+
+    changeSelected(e) {
+        let selected = document.getElementsByClassName('profile-selected');
+        if (selected.length > 0) $(selected[0]).removeClass('profile-selected');
+        $(e.currentTarget).addClass('profile-selected');
     }
 
     render() {
-        <ul className="profile-nav-links">
-            <span className="profile-nav-name">{this.props.currentUser ? this.props.currentUser.name : ""}</span>
-            <Link to="/profile">
-                <li>
-                    <span className="nav-icon-img"></span>
-                    <span className="nav-title">Profile</span>
-                </li>
-            </Link>
-            <Link to="/profile/cop-list">
-                <li>
-                    <span className="nav-icon-img"></span>
-                    <span className="nav-title">Following</span>
-                </li>
-            </Link>
-        </ul>
+        return (
+            <ul className="profile-nav-links">
+                <span className="profile-nav-name">{this.props.currentUser ? this.props.currentUser.name : ""}</span>
+                <Link to="/profile">
+                    <li id="prof-nav-profile" className="profile-nav-item" onClick={this.changeSelected}>
+                        <span className="nav-icon-img"></span>
+                        <span className="nav-title">Profile</span>
+                    </li>
+                </Link>
+                <Link to="/profile/cop-list">
+                    <li id="prof-nav-follows" className="profile-nav-item" onClick={this.changeSelected}>
+                        <span className="nav-icon-img"></span>
+                        <span className="nav-title">Following</span>
+                    </li>
+                </Link>
+            </ul>
+        )
     }
 };
 

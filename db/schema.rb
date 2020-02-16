@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_09_173506) do
+ActiveRecord::Schema.define(version: 2020_02_13_040826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,15 @@ ActiveRecord::Schema.define(version: 2020_02_09_173506) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["username", "email", "session_token"], name: "index_users_on_username_and_email_and_session_token", unique: true
+  end
+
+  create_table "watchlists", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "shoe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shoe_id"], name: "index_watchlists_on_shoe_id"
+    t.index ["user_id"], name: "index_watchlists_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

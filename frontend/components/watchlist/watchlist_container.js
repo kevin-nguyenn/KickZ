@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
+import { fetchShoes } from '../../actions/shoe_actions';
+import { fetchWatchlist } from '../../actions/watchlist_actions';
 
-import Watchlist from '';
+import Watchlist from './watchlist';
 
 const mapStateToProps = (state) => {
     let isLoggedIn = (state.session.currentUserId ? true : false);
@@ -13,7 +15,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchWatchlists: () => dispatch(fetchWatchlists())
+    fetchShoes: () => dispatch(fetchShoes()),
+    fetchWatchlist: () => dispatch(fetchWatchlist())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)();
+export default connect(mapStateToProps, mapDispatchToProps)(Watchlist);

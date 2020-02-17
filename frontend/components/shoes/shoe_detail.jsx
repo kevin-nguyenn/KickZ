@@ -1,4 +1,5 @@
 import React from 'react';
+import SalesInfo from './detail_components/sale_info';
 
 
 class ShoeDetail extends React.Component {
@@ -15,7 +16,12 @@ class ShoeDetail extends React.Component {
 
         return (
             <section className="shoe-detail-container">
-                {/* shoe details */}
+                <div className="shoe-detail-buttons-outer">
+                    <div className="shoe-detail-buttons">
+                        <button className="shoe-detail+p">+ Portfolio</button>
+                        <button className="shoe-detail+f">+ Follow</button>
+                    </div>
+                </div>
                 <header>{this.props.shoe.name}</header>
                 <span className="shoe-detail-misc">
                     <span className="shoe-detail-condition">Condition:

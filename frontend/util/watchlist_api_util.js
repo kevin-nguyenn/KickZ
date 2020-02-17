@@ -1,9 +1,9 @@
-export const fetchWatchlists = () => {
-    return $.ajax({
-        method: 'GET',
-        url: `/api/watchlists`
-    });
-};
+// export const fetchWatchlists = () => {
+//     return $.ajax({
+//         method: 'GET',
+//         url: `/api/watchlists`
+//     });
+// };
 
 export const fetchWatchlist = (id) => {
     return $.ajax({
@@ -20,13 +20,13 @@ export const createWatchlist = (watchlist) => (
     })
 );
 
-export const updateWatchlist = (watchlist) => (
-    $.ajax({
-        method: 'PATCH',
-        url: `/api/watchlists/${watchlist.id}`,
-        data: { watchlist }
-    })
-);
+// export const updateWatchlist = (watchlist) => (
+//     $.ajax({
+//         method: 'PATCH',
+//         url: `/api/watchlists/${watchlist.id}`,
+//         data: { watchlist }
+//     })
+// );
 
 export const addItem = (id, item) => (
     $.ajax({

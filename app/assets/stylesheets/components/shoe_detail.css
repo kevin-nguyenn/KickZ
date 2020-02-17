@@ -1,0 +1,94 @@
+.shoe-detail-container {
+    margin-top: 8%;
+    width: 100%;
+    /* margin-left: 18%; */
+}
+
+.shoe-detail-container > header {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.shoe-detail-buttons-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 15%;
+}
+
+.shoe-detail-buttons {
+    width: 200px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shoe-detail-buttons > button {
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.shoe-detail-buttons > button:hover {
+  background-color: black;
+  color: white;
+}
+
+.shoe-detail-misc {
+    display: flex;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 18px;
+    letter-spacing: .3px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.shoe-detail-condition {
+    display: flex;
+    color: #999;
+}
+
+.shoe-detail-condition > p {
+    padding-left: 5px;
+    padding-right: 12px;
+}
+
+.shoe-detail-ticker {
+    display: flex;
+    color: #999;
+    padding-left: 12px;
+}
+
+.shoe-detail-ticker > p {
+    padding-left: 5px;
+    padding-right: 12px;
+}
+
+.shoe-detail-authenticity {
+    padding-left: 12px;
+}
+
+.shoe-detail-img-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.shoe-detail-img {
+    width: 700px;
+}

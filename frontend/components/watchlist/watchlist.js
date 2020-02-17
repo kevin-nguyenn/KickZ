@@ -3,13 +3,28 @@ import React from 'react';
 class Watchlist extends React.Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            watchlists: this.props.watchlists
+        }
     };
 
-    render() {
-        return (
-            <div>
+    componentDidMount() {
+        this.props.fetchWatchlists()
+            .then(action => this.setState({watchlists: action.watchlists}))
+    }
 
-            </div>
+    render() {
+        let watchlists = Object.values(this.state.watchlists);
+
+        return (
+            <ul className="watchlist-container">
+                {
+                    watchlists.map(watchlist => (
+                        <WatchlistItem watchlist={watchlist} key={watchlist.id} />
+                    ))
+                }
+            </ul>
         )
     }
 };

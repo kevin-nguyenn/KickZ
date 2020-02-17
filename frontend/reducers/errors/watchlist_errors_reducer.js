@@ -1,7 +1,7 @@
 import { RECEIEVE_WATCHLIST_ERRORS } from '../../actions/watchlist_actions';
 
 export default (oldState = [], action) => {
-    Object.freeze(state);
+    Object.freeze(oldState);
 
     switch (action.type) {
         case RECEIEVE_WATCHLIST_ERRORS:

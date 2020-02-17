@@ -12,7 +12,8 @@ class ShoeIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchShoes().then(action => this.setState({ shoes: action.shoes }));
+        this.props.fetchShoes()
+            .then(action => this.setState({ shoes: action.shoes }));
     }
 
     render() {
@@ -50,7 +51,7 @@ class ShoeIndex extends React.Component {
                     <ul className="shoe-listings">
                         {
                             shoes.map((shoe, i) => (
-                                <ShoeIndexItem shoe={shoe} key={i} />
+                                <ShoeIndexItem shoe={shoe} key={shoe.id} />
                             ))
                         }
                     </ul>

@@ -3,7 +3,7 @@ import { RECEIVE_WATCHLIST,
     DELETE_ITEM, } from '../../actions/watchlist_actions';
 
 export default (oldState = {}, action) => {
-    Object.freeze(state);
+    Object.freeze(oldState);
     
     switch (action.type) {
         case RECEIVE_WATCHLIST:

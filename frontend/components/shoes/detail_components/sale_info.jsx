@@ -28,7 +28,9 @@ export default ({ shoe, sales, orders}) => {
                 <span>10</span>
             </span>
             <span className="shoe-orders-style-line"></span>
-            <span></span>
+            <span>
+                
+            </span>
         </div>
     )
 }

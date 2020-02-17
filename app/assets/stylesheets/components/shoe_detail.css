@@ -11,6 +11,22 @@
     /* letter-spacing: 1px; */
 }
 
+.shoe-detail-buttons-outer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 55%;
+}
+
+.shoe-detail-buttons {
+    width: 200px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .shoe-detail-misc {
     display: flex;
     font-family: 'proxima-nova', sans-serif;

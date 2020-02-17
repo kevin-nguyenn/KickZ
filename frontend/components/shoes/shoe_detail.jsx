@@ -1,4 +1,5 @@
 import React from 'react';
+import SalesInfo from './detail_components/sale_info';
 
 
 class ShoeDetail extends React.Component {

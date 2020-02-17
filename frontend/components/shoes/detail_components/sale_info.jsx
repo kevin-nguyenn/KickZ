@@ -27,9 +27,54 @@ export default ({ shoe, sales, orders}) => {
                 <p>Size</p>
                 <span>10</span>
             </span>
-            <span className="shoe-orders-style-line"></span>
-            <span>
-                
+            <span className="style-line"></span>
+            <span className="shoe-orders-last-sale">
+                <span className="shoe-last-sale-top">
+                    <p className="last-sale-bold">Last Sale</p>
+                    <p className="last-sale-num">{pricing(sales[salesEnd].price)}</p> 
+                    <p className="last-sale-change" style={lastDiff > 0 ? { color: 'green' } : lastDiff < 0 ? { color: 'red' } : { color: 'black' }}>
+                        {`${formatMoney(lastDiff)} (${lastDiff / sales[salesEnd - 1].price}%)`} 
+                    </p>
+                </span>
+                <span className="shoe-last-sale-bottom">
+                    <p>Size {sales[salesEnd].size}</p>
+                    <span className="small-style-line"></span>
+                    <p>View All Sales</p>
+                </span>
+            </span>
+            <span className="shoe-asks">
+                <Link to="#">
+                    <span className="asks-left">
+                        <p className="shoe-ask-price">$500</p>
+                        <p>Lowest Ask</p>
+                    </span>
+                    <span className="asks-right">
+                        <p className="asks-right-big">Buy</p>
+                        <p className="asks-right-small">or Bid</p>
+                    </span>
+                </Link>
+                <span className="asks-bottom">
+                    <p>Size 10</p>
+                    <span className="small-style-line"></span>
+                    <p>View All Asks</p>
+                </span>
+            </span>
+            <span className="shoe-bids">
+                <Link to="#">
+                    <span shoe="bids-left">
+                        <p className="bids-right-big">$500</p>
+                        <p className="bids-right-small">Lowest Bid</p>
+                    </span>
+                    <span className="bids-right">
+                        <p className="bids-right-big">Sell</p>
+                        <p className="bids-right-small">or Ask</p>
+                    </span>
+                </Link>
+                <span className="bids-bottom">
+                    <p>Size 10</p>
+                    <span className="small-style-line"></span>
+                    <p>View All Bids</p>
+                </span>
             </span>
         </div>
     )

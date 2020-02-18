@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
     updateUser: (user) => dispatch(updateUser(user)),
-    removeUser: (id) => dispatch(removeUser(id)),
+    removeUser: (id) => dispatch(removeUser(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileShow);

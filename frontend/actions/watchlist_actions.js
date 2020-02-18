@@ -36,8 +36,8 @@ export const receiveWathlistsErrors = errors => ({
 //         .then((watchlists) => dispatch(receiveWatchlists(watchlists)));
 // };
 
-export const fetcWatchlist = (id) => dispatch => {
-    return WatchlistAPIUtil.fetcWathclist(id)
+export const fetchWatchlist = (id) => dispatch => {
+    return WatchlistAPIUtil.fetchWatchlist(id)
         .then(watchlist => dispatch(receiveWatchlist(watchlist)));
 };
 

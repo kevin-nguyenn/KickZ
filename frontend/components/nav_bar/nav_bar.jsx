@@ -55,8 +55,9 @@ class NavBar extends React.Component {
 
         return (
             <nav className="header-nav">
-                {/* <h1 className="header-logo">KickZ</h1> */}
-                <a href="/" className="header-logo">KickZ</a>
+                <span className="header-logo-span">
+                    <a href="/" className="header-logo">KickZ</a>
+                </span>
 
                 <ul className="header-list">
                     { sessionDisplay }

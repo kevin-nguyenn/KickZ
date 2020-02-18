@@ -10,7 +10,7 @@ class Watchlist extends React.Component {
     };
 
     componentDidMount() {
-        this.props.fetchWatchlists()
+        this.props.fetchWatchlist()
             .then(action => this.setState({watchlists: action.watchlists}))
     }
 

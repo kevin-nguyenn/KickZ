@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
     fetchShoes: () => dispatch(fetchShoes()),
-    fetchWatchlist: () => dispatch(fetchWatchlist())
+    fetchWatchlist: (id) => dispatch(fetchWatchlist(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Watchlist);

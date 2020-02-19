@@ -23,7 +23,7 @@ class NavBar extends React.Component {
             <div className="nav-links">
                 { showNavLinks }
                 <div className="nav-dropdown">
-                    <li>
+                    <li className="nav-link-account">
                         <span className="nav-link-item"><Link to="/profile">My Account</Link></span>
                     </li>
                     <div className="nav-dropdown-items">

@@ -1,3 +1,5 @@
-json.array! @watchlists do |watchlist|
-    json.extract! shoe, :id, :user_id, :shoe_id
+@watchlists.each do |watchlist|
+  json.set! watchlist.id do
+    json.partial! "/api/watchlists/watchlist", watchlist: watchlist
+  end
 end

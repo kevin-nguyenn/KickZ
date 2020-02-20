@@ -6,7 +6,6 @@ class ProfileShow extends React.Component {
     };
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 <p>Hi, {this.props.currentUser}</p>

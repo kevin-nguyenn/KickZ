@@ -1,9 +1,9 @@
-// export const fetchWatchlists = () => {
-//     return $.ajax({
-//         method: 'GET',
-//         url: `/api/watchlists`
-//     });
-// };
+export const fetchWatchlists = () => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/watchlists`
+    });
+};
 
 export const fetchWatchlist = (id) => {
     return $.ajax({
@@ -15,7 +15,7 @@ export const fetchWatchlist = (id) => {
 export const createWatchlist = (watchlist) => (
     $.ajax({
         method: 'POST',
-        url: '/api/watchlists',
+        url: `/api/watchlists/${ watchlist.shoe_id }/watchlists`,
         data: { watchlist }
     })
 );

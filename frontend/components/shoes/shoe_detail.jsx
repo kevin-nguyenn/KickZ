@@ -38,6 +38,11 @@ class ShoeDetail extends React.Component {
                     <img src={this.props.shoe.photoUrl} alt="" 
                         className="shoe-detail-img"
                     />
+                    <span className="shoe-details">
+                        <span><p className="bold-this">Style</p> <p>{this.props.shoe.style_code}</p></span>
+                        <span><p className="bold-this">Colorway</p> <p>{this.props.shoe.colorway}</p></span>
+                        <span><p className="bold-this">Release Date</p> <p>{this.props.shoe.release_date}</p></span>
+                    </span>
                 </div>
             </section>
         )

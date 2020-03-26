@@ -3,6 +3,7 @@ class Shoe < ApplicationRecord
     validates :ticker, presence: true, uniqueness: true
     validates :price, presence: true
     validates :brand, presence: true
+    validates :release_date, presence: true
 
     has_one_attached :photo
     

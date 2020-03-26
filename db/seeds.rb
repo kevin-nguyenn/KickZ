@@ -18,36 +18,111 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
             name: "Jordan 1 Retro High Satin Black Toe (W)",
             ticker: "AJ1H-STNBTW",
             price: 485,
-            brand: "Jordan"
+            brand: "Jordan",
+            style_code: "CD0461-016",
+            colorway: "black/white-university red",
+            release_date: "08/17/2019"
         },
         {
             name: "Jordan 1 Retro High Obsidian UNC",
             ticker: "AJ1H-UNCL",
             price: 272,
-            brand: "Jordan"
+            brand: "Jordan",
+            style_code: "555088-140",
+            colorway: "sail/obsidian-univeristy blue",
+            release_date: "08/31/2019"
+        },
+        {
+            name: "Jordan 1 Retro High NC to Chi Leather (W)",
+            ticker: "AJ1H-UCLW",
+            price: 190,
+            brand: "Jordan",
+            style_code: "CD0461-046",
+            colorway: "black/dark powder blue-gym red",
+            release_date: "02/13/2020"
         }
     ]
 
     jordan_1s.map! { |shoe| Shoe.create(shoe) };
+
+    jordan_3s = [
+        {
+            name: "Jordan 3 Retro Fire Red Cement (Nike Chi)",
+            ticker: "AJ3U-FRCNC",
+            price: 235,
+            brand: "Jordan",
+            style_code: "CU2277-600",
+            colorway: "varsity red/varsity red-cement",
+            release_date: "02/22/2020"
+        }
+    ]
+
+    jordan_3s.map! { |shoe| Shoe.create(shoe) };
+
+    jordan_5s = [
+        {
+            name: "Jordan 5 Retro Off-White Black",
+            ticker: "AJ5-OWBK",
+            price: 710,
+            brand: "Jordan",
+            style_code: "CT8480-001",
+            colorway: "black/muslin-fire red",
+            release_date: "02/15/2020"
+        }
+    ]
+
+    jordan_5s.map! { |shoe| Shoe.create(shoe) };
+
+    jordan_6s = [
+        {
+            name: "Jordan 6 Retro Travis Scott",
+            ticker: "AJ6R-TS",
+            price: 517,
+            brand: "Jordan",
+            style_code: "CN1084-200",
+            colorway: "medium olive/black-sail-university red",
+            release_date: "10/11/2019"
+        }
+    ]
+
+    jordan_6s.map! { |shoe| Shoe.create(shoe) };
 
     yeezys = [
         {
             name: "adidas Yeezy Boost 350 V2 Lundmark",
             ticker: "350V2-LM",
             price: 284,
-            brand: "Yeezy"
+            brand: "Yeezy",
+            style_code: "FV3254",
+            colorway: "lundmark/lundmark/lundmark",
+            release_date: "07/11/2019"
+        },
+        {
+            name: "adidas Yeezy Boost 350 Moonrock",
+            ticker: "YZY350-MNRCK",
+            price: 600,
+            brand: "Yeezy",
+            style_code: "AQ2660",
+            colorway: "agate gray/moonrock-agate gray",
+            release_date: "11/14/2015"
         },
         {
             name: "adidas Yeezy Boost 350 V2 Cream/Triple White",
             ticker: "YZY350V2-CRMWHT",
             price: 294,
-            brand: "Yeezy"
+            brand: "Yeezy",
+            style_code: "CP9366",
+            colorway: "cream white/cream white",
+            release_date: "04/29/2017"
         },
         {
             name: "adidas Yeezy Boost 350 V2 Zebra",
             ticker: "YZY350V2-ZEBRA",
             price: 295,
-            brand: "Yeezy"
+            brand: "Yeezy",
+            style_code: "CP9654",
+            colorway: "white/core black/red",
+            release_date: "02/25/2017"
         }
     ]
 

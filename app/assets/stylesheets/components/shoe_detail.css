@@ -92,3 +92,9 @@
 .shoe-detail-img {
     width: 700px;
 }
+
+.shoe-detail-cat {
+    font-weight: bold;
+    color: #000;
+    padding-right: 5px;
+}

@@ -57,6 +57,36 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
         }
     ]
 
+    jordan_3s.map! { |shoe| Shoe.create(shoe) };
+
+    jordan_5s = [
+        {
+            name: "Jordan 5 Retro Off-White Black",
+            ticker: "AJ5-OWBK",
+            price: 710,
+            brand: "Jordan",
+            style_code: "CT8480-001",
+            colorway: "black/muslin-fire red",
+            release_date: "02/15/2020"
+        }
+    ]
+
+    jordan_5s.map! { |shoe| Shoe.create(shoe) };
+
+    jordan_6s = [
+        {
+            name: "Jordan 6 Retro Travis Scott",
+            ticker: "AJ6R-TS",
+            price: 517,
+            brand: "Jordan",
+            style_code: "CN1084-200",
+            colorway: "medium olive/black-sail-university red",
+            release_date: "10/11/2019"
+        }
+    ]
+
+    jordan_6s.map! { |shoe| Shoe.create(shoe) };
+
     yeezys = [
         {
             name: "adidas Yeezy Boost 350 V2 Lundmark",
@@ -66,6 +96,15 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
             style_code: "FV3254",
             colorway: "lundmark/lundmark/lundmark",
             release_date: "07/11/2019"
+        },
+        {
+            name: "adidas Yeezy Boost 350 Moonrock",
+            ticker: "YZY350-MNRCK",
+            price: 600,
+            brand: "Yeezy",
+            style_code: "AQ2660",
+            colorway: "agate gray/moonrock-agate gray",
+            release_date: "11/14/2015"
         },
         {
             name: "adidas Yeezy Boost 350 V2 Cream/Triple White",

@@ -39,9 +39,18 @@ class ShoeDetail extends React.Component {
                         className="shoe-detail-img"
                     />
                     <span className="shoe-details">
-                        <span><p className="bold-this">Style</p> <p>{this.props.shoe.style_code}</p></span>
-                        <span><p className="bold-this">Colorway</p> <p>{this.props.shoe.colorway}</p></span>
-                        <span><p className="bold-this">Release Date</p> <p>{this.props.shoe.release_date}</p></span>
+                        <span>
+                            <p className="shoe-detail-cat">Style</p>
+                            <p>{this.props.shoe.style_code}</p>
+                        </span>
+                        <span>
+                            <p className="shoe-detail-cat">Colorway</p> 
+                            <p>{this.props.shoe.colorway}</p>
+                        </span>
+                        <span>
+                            <p className="shoe-detail-cat">Release Date</p> 
+                            <p>{this.props.shoe.release_date}</p>
+                        </span>
                     </span>
                 </div>
             </section>

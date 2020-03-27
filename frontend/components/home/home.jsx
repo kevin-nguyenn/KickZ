@@ -24,8 +24,7 @@ class Home extends React.Component {
 
                 <SlideShow />
 
-                <div className="">Most Popular
-                </div>
+                {/* <div className="">Most Popular</div> */}
             </div>
         );
     }

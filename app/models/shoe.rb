@@ -11,7 +11,5 @@ class Shoe < ApplicationRecord
         foreign_key: :shoe_id,
         class_name: 'Transactions'
 
-    has_many :followers,
-        foreign_key: :shoe_followed_id,
-        class_name: 'Followers'
+    has_many :follows
 end

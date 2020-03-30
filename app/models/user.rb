@@ -6,6 +6,18 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+    has_many :follows
+
+    has_many :sold_orders,
+        primary_key: :id,
+        foreign_key: :buyer_id,
+        class_name: :Order
+
+    has_many :listed_orders,
+        primary_key: :id,
+        foreign_key: :seller_id,
+        class_name: :Order
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user

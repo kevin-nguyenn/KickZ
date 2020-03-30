@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_182448) do
+ActiveRecord::Schema.define(version: 2020_03_30_201519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,34 @@ ActiveRecord::Schema.define(version: 2020_03_26_182448) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "shoe_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shoe_id"], name: "index_follows_on_shoe_id"
+    t.index ["user_id", "shoe_id"], name: "index_follows_on_user_id_and_shoe_id", unique: true
+    t.index ["user_id"], name: "index_follows_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "shoe_id", null: false
+    t.integer "seller_id", null: false
+    t.integer "buyer_id"
+    t.integer "price", null: false
+    t.string "order_type", null: false
+    t.string "active", null: false
+    t.string "sold", null: false
+    t.string "shipped", null: false
+    t.string "sex", null: false
+    t.string "size", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_orders_on_buyer_id"
+    t.index ["seller_id"], name: "index_orders_on_seller_id"
+    t.index ["shoe_id"], name: "index_orders_on_shoe_id"
   end
 
   create_table "shoes", force: :cascade do |t|

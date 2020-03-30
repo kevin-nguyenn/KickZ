@@ -1,22 +1,20 @@
 import { connect } from 'react-redux';
+import { fetchFollows } from '../../actions/follow_actions';
 import { fetchShoes } from '../../actions/shoe_actions';
-import { fetchWatchlist } from '../../actions/watchlist_actions';
 
-import Watchlist from './watchlist';
+import Follows from './follows';
 
 const mapStateToProps = (state) => {
     let isLoggedIn = (state.session.currentUserId ? true : false);
     return ({
         currentUser: (isLoggedIn ? state.entities.currentUser : null),
-        products: state.entities.products,
-        watchlist: state.entities.watchlist,
-        errors: state.errors.watchlist
+        shoes: state.entities.shoes
     });
 };
 
 const mapDispatchToProps = dispatch => ({
     fetchShoes: () => dispatch(fetchShoes()),
-    fetchWatchlist: (id) => dispatch(fetchWatchlist(id))
+    fetchFollows: (id) => dispatch(fetchFollows(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Watchlist);
+export default connect(mapStateToProps, mapDispatchToProps)(Follows);

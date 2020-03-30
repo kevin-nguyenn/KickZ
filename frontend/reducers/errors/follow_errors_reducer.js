@@ -1,6 +1,6 @@
 import { RECEIVE_FOLLOW, 
     RECEIVE_FOLLOW_ERRORS 
-} from '../../actions/follows';
+} from '../../actions/follow_actions';
 
 export default (state = [], action) => {
     Object.freeze(state);

@@ -1,6 +1,6 @@
 import { RECEIVE_FOLLOWS, 
     RECEIVE_FOLLOW, 
-} from '../../actions/follows';
+} from '../../actions/follow_actions';
 
 const followsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

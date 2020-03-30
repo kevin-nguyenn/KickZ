@@ -1,1 +1,1 @@
-json.extract! follow, :id, :product_id, :user_id
+json.extract! follow, :id, :shoe_id, :user_id

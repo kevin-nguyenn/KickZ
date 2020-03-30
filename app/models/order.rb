@@ -3,11 +3,6 @@ class Order < ApplicationRecord
 
     belongs_to :shoe
 
-    # belongs_to :buyer,
-    #   foreign_key: :buyer_id,
-    #   primary_key: :id,
-    #   class_name: :User
-
     belongs_to :seller,
         foreign_key: :seller_id,
         primary_key: :id,

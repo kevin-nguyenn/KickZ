@@ -32,5 +32,6 @@ export const fetchShoe = (id) => dispatch => {
 
 export const updateShoe = shoe => dispatch => {
     return ShoeAPIUtil.updateShoe(shoe)
-    .then(p => dispatch(receiveShoe(p)), errors => dispatch(receiveShoeErrors(errors.responseJSON)));
+        .then(p => dispatch(receiveShoe(p)), 
+        errors => dispatch(receiveShoeErrors(errors.responseJSON)));
 };

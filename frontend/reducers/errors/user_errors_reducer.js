@@ -1,6 +1,8 @@
-import { RECEIVE_USER, RECEIVE_USER_ERRORS } from '../../actions/user_actions';
+import { RECEIVE_USER, 
+    RECEIVE_USER_ERRORS 
+} from '../../actions/user_actions';
 
-export default (state = [], action) => {
+const userErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_USER_ERRORS:
@@ -13,3 +15,5 @@ export default (state = [], action) => {
             return state;
     }
 };
+
+export default userErrorsReducer;

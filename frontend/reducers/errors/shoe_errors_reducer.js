@@ -1,6 +1,8 @@
-import { RECEIVE_SHOE, RECEIVE_SHOE_ERRORS } from '../../actions/shoe_actions';
+import { RECEIVE_SHOE, 
+    RECEIVE_SHOE_ERRORS 
+} from '../../actions/shoe_actions';
 
-export default (state = [], action) => {
+const shoeErrorsReducer = (state = [], action) => {
     Object.freeze(state);
     
     switch (action.type) {
@@ -14,3 +16,5 @@ export default (state = [], action) => {
             return state;
     }
 };
+
+export default shoeErrorsReducer;

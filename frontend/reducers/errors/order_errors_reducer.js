@@ -2,7 +2,7 @@ import { RECEIVE_ORDER,
     RECEIVE_ORDER_ERRORS 
 } from '../../actions/order_actions';
 
-export default (state = [], action) => {
+const orderErrorsReducer = (state = [], action) => {
     Object.freeze(state);
 
     switch (action.type) {
@@ -16,3 +16,5 @@ export default (state = [], action) => {
             return state;
     }
 };
+
+export default orderErrorsReducer;

@@ -7,9 +7,9 @@ class Shoe < ApplicationRecord
 
     has_one_attached :photo
     
-    has_many :transactions,
-        foreign_key: :shoe_id,
-        class_name: 'Transactions'
+    has_many :sales
+
+    has_many :orders
 
     has_many :follows
 end

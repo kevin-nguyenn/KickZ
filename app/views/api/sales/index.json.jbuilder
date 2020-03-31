@@ -1,4 +1,4 @@
-json.set! @sales[0].product_id do
+json.set! @sales[0].shoe_id do
   @sales.each do |sale|
     json.set! sale.id do
       json.partial! 'sale', sale: sale

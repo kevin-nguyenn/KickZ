@@ -12,14 +12,14 @@ const salesReducer = (oldState = {}, action) => {
 
         case RECEIVE_SALE:
             if (action.sale) {
-                return Object.assign({}, oldState, { [action.sale.product_id]: { [action.sale.id]: action.sale } });
+                return Object.assign({}, oldState, { [action.sale.shoe_id]: { [action.sale.id]: action.sale } });
             } else {
                 return oldState;
             }
 
         case RECEIVE_LAST_SALE:
             if (action.sale) {
-                return Object.assign({}, oldState, { [action.sale.product_id]: { lastSale: action.sale } });
+                return Object.assign({}, oldState, { [action.sale.shoe_id]: { lastSale: action.sale } });
             } else {
                 return oldState;
             }

@@ -65,7 +65,9 @@ class ShoeDetail extends React.Component {
     }
 
     render() {
-        if (this.props.shoe === undefined) return null;
+        // if (this.props.shoe === undefined) return null;
+        let shoe = this.props.shoes[this.state.shoeId] || {};
+
 
         return (
             <section className="shoe-detail-container">
@@ -77,34 +79,34 @@ class ShoeDetail extends React.Component {
                         </button>
                     </div>
                 </div>
-                <header>{this.props.shoe.name}</header>
+                <header>{shoe.name}</header>
                 <span className="shoe-detail-misc">
                     <span className="shoe-detail-condition">Condition:
                         <p style={{color: 'green'}}>New</p>
                     </span>|
                     <span className="shoe-detail-ticker">Ticker:
-                        <p style={{color: 'black'}}>{this.props.shoe.ticker}</p>
+                        <p style={{color: 'black'}}>{shoe.ticker}</p>
                     </span>|
                     <span className="shoe-detail-authenticity">
                         <p style={{color: 'green'}}>100% Authentic</p>
                     </span>
                 </span>
                 <div className="shoe-detail-img-container">
-                    <img src={this.props.shoe.photoUrl} alt="" 
+                    <img src={shoe.photoUrl} alt="" 
                         className="shoe-detail-img"
                     />
                     <span className="shoe-details">
                         <span>
                             <p className="shoe-detail-cat">Style</p>
-                            <p>{this.props.shoe.style_code}</p>
+                            <p>{shoe.style_code}</p>
                         </span>
                         <span>
                             <p className="shoe-detail-cat">Colorway</p> 
-                            <p>{this.props.shoe.colorway}</p>
+                            <p>{shoe.colorway}</p>
                         </span>
                         <span>
                             <p className="shoe-detail-cat">Release Date</p> 
-                            <p>{this.props.shoe.release_date}</p>
+                            <p>{shoe.release_date}</p>
                         </span>
                     </span>
                 </div>

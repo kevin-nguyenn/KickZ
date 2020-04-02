@@ -6,7 +6,13 @@ import FormContainer from './form';
 
 const mapStateToProps = ({ errors, ownProps }) => {
     return {
-        errors: errors.session
+        errors: errors.session,
+        currentUser: {
+            username: "",
+            email: "",
+            id: "",
+            name: ""
+        }
     };
 };
 

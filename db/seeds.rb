@@ -139,3 +139,23 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
             filename: "#{ticker}.jpg"
         )
     end
+
+order1 = Order.create!(
+    shoe_id: Shoe.all[0].id, seller_id: User.all[0].id, price: 550, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order2 = Order.create!(
+    shoe_id: Shoe.all[1].id, seller_id: User.all[0].id, price: 600, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+
+sale1 = Sale.create!(
+    order_id: order1.id, shoe_id: order1.shoe_id, sex: order1.sex, 
+    size: order1.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order1.price
+)
+sale2 = Sale.create!(
+    order_id: order2.id, shoe_id: order2.shoe_id, sex: order2.sex, 
+    size: order2.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order2.price
+)

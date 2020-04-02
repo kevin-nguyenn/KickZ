@@ -45,3 +45,7 @@ export const logout = () => dispatch => (
         dispatch(logoutCurrentUser())
     ))
 );
+
+export const checkLogin = () => dispatch => (
+    SessionUtil.checkLogin().then(user => dispatch(receiveCurrentUser(user)))
+);

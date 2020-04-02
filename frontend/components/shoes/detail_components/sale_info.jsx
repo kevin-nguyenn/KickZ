@@ -27,7 +27,7 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
         if (lowestAsk === -1) {
             window.location.href = window.location.origin + `/#/profile/listings/new`;
         } else {
-            console.log(orders[1]);
+            // console.log(orders[1]);
             let orderUpdate = Object.assign({}, orders[1]);
             orderUpdate.active = false;
             orderUpdate.sold = true;
@@ -65,7 +65,7 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
         if (highestBid === -1) {
             window.location.href = window.location.origin + `/#/profile/listings/new`;
         } else {
-            console.log(orders[0]);
+            // console.log(orders[0]);
             let orderUpdate = Object.assign({}, orders[0]);
             orderUpdate.active = false;
             orderUpdate.sold = true;

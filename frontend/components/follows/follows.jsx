@@ -1,8 +1,7 @@
 import React from 'react'
-// import isEmpty from '../../utils/obj-util';
+import isEmpty from '../../util/object_api_util';
 import FollowItemContainer from './follow_item_container';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+// import { Link } from 'react-router-dom';
 
 class Follows extends React.Component {
     constructor(props) {
@@ -34,20 +33,20 @@ class Follows extends React.Component {
     render() {
         let shoes = this.props.shoes;
         return (
-            <div id="follows-div">
-                <span id="follows-header">Following</span>
-                <table id="follows-table">
-                    <thead id="follows-table-heading">
-                        <tr className="fl-row">
-                            <th className="fl-col0"></th>
-                            <th className="fl-col1">Item</th>
-                            <th className="fl-col2">Highest Bid</th>
-                            <th className="fl-col3">Lowest Ask</th>
+            <div className="follows-div">
+                <span className="follows-header">Following</span>
+                <table className="follows-table">
+                    <thead className="follows-table-heading">
+                        <tr className="follows-row-cat">
+                            <th className="follow-cat0"></th>
+                            <th className="follow-cat1">Item</th>
+                            <th className="follow-cat2">Highest Bid</th>
+                            <th className="follow-cat3">Lowest Ask</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            // this.state.follows.map(follow => isEmpty(follow) ? null : <FollowItemContainer follow={follow} key={`follow${follow.f_id}`} />)
+                            this.state.follows.map(follow => isEmpty(follow) ? null : <FollowItemContainer follow={follow} key={`follow${follow.f_id}`} />)
                         }
                     </tbody>
                 </table>

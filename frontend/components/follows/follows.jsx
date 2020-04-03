@@ -1,5 +1,5 @@
 import React from 'react'
-import isEmpty from '../../utils/obj-util';
+// import isEmpty from '../../utils/obj-util';
 import FollowItemContainer from './follow_item_container';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
@@ -47,7 +47,7 @@ class Follows extends React.Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.follows.map(follow => isEmpty(follow) ? null : <FollowItemContainer follow={follow} key={`follow${follow.f_id}`} />)
+                            // this.state.follows.map(follow => isEmpty(follow) ? null : <FollowItemContainer follow={follow} key={`follow${follow.f_id}`} />)
                         }
                     </tbody>
                 </table>

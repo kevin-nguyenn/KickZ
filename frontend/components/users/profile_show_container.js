@@ -4,9 +4,9 @@ import { updateUser, removeUser } from '../../actions/user_actions';
 import ProfileShow from './profile_show';
 
 const mapStateToProps = (state) => {
-    let isLoggedIn = (state.session.currentUserId ? true : false);
+    let isLoggedIn = (state.session.id ? true : false);
     return {
-        currentUser: (isLoggedIn ? state.entities.currentUser : null),
+        currentUser: (isLoggedIn ? state.entities.user : null),
     }
 };
 

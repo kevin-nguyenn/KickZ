@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ProfileNav from './profile_nav';
 
 const mapStateToProps = (state) => ({
-    currentUser: state.entities.currentUser
+    currentUser: state.entities.users
 });
 
 const mapDispatchToProps = dispatch => ({

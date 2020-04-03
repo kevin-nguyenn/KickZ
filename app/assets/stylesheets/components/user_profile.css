@@ -67,11 +67,25 @@
   color: #000;
 }
 
-.profile-show {
+.profile {
   display: flex;
   position: relative;
-  margin-left: 250px;
-  margin-top: 6%;
-  width: calc(100vw - 250px);
+  margin-left: 16%;
+  /* width: calc(100vw - 250px); */
   flex-direction: column;
+}
+
+.profile-show {
+  margin-top: 8%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'proxima-nova', sans-serif;
+  letter-spacing: 1px;
+}
+
+.profile-show-title {
+  margin-bottom: 5px;
+  font-family: 'impact';
+  font-size: 30px;
 }

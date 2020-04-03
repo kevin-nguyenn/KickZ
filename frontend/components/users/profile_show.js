@@ -15,7 +15,6 @@ class ProfileShow extends React.Component {
                     Hi, {this.props.currentUser[1].username}.
                     {/* ^^^ might only work for demouser */}
                 </p>
-                {/* try to display currentUser.username */}
             </div>
         )
     }

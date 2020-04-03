@@ -66,3 +66,12 @@
   background-color: white;
   color: #000;
 }
+
+.profile-show {
+  display: flex;
+  position: relative;
+  margin-left: 250px;
+  margin-top: 6%;
+  width: calc(100vw - 250px);
+  flex-direction: column;
+}

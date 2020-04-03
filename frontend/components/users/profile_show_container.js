@@ -6,7 +6,7 @@ import ProfileShow from './profile_show';
 const mapStateToProps = (state) => {
     let isLoggedIn = (state.session.id ? true : false);
     return {
-        currentUser: (isLoggedIn ? state.entities.user : null),
+        currentUser: (isLoggedIn ? state.entities.users : null),
     }
 };
 

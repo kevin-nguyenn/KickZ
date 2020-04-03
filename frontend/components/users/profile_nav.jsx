@@ -22,7 +22,7 @@ class ProfileNav extends React.Component {
     render() {
         return (
             <ul className="profile-nav-links">
-                <span className="profile-nav-name">{this.props.currentUser ? this.props.currentUser.username : ""}</span>
+                <span className="profile-nav-name">{this.props.currentUser ? this.props.currentUser[1].username : ""}</span>
                 <Link to="/profile">
                     <li id="prof-nav-profile" className="profile-nav-item" onClick={this.changeSelected}>
                         <span className="nav-icon-img">😎</span>

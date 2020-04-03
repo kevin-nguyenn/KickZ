@@ -6,7 +6,7 @@ import NavBarContainer from "./nav_bar/nav_bar_container";
 // import SignUpFormContainer from './session_form/signup_form_container';
 // import LogInFormContainer from './session_form/login_form_container';
 import ShoeIndexContainer from './shoes/shoe_index_container'
-import FormContainer from './session_form/form';
+import FormContainer from './session_form/signup_form_container';
 import HomeContainer from './home/home_container';
 import ShoeDetailContainer from './shoes/shoe_detail_container';
 import ProfileContainer from './users/profile_container';

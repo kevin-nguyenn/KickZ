@@ -7,9 +7,9 @@ import { fetchFollows, createFollow, deleteFollow } from '../../actions/follow_a
 import ShoeDetail from './shoe_detail';
 
 const mSTP = (state, ownProps) => {
-    let isLoggedIn = (state.session.currentUserId ? true : false);
+    let isLoggedIn = (state.session.id ? true : false);
     return ({
-        currentUser: (isLoggedIn ? state.entities.currentUser : null),
+        currentUser: (isLoggedIn ? state.entities.users : null),
         shoes: state.entities.shoes,
         orders: state.entities.orders,
         sales: state.entities.sales

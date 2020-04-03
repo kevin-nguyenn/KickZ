@@ -3,10 +3,10 @@ import Home from './home';
 import { logout } from '../../actions/session_actions';
 
 const mSTP = (state) => {
-    let isLoggedIn = (state.session.currentUserId ? true : false);
+    let isLoggedIn = (state.session.id ? true : false);
     return ({
         loggedIn: isLoggedIn,
-        currentUser: (isLoggedIn ? state.entitites.currentUser : null)
+        currentUser: (isLoggedIn ? state.entitites.users : null)
     })
 };
 

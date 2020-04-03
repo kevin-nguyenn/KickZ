@@ -5,9 +5,9 @@ import { fetchShoe } from '../../actions/shoe_actions';
 import FollowItem from './follow_item';
 
 const mapStateToProps = (state, ownProps) => {
-    let isLoggedIn = (state.session.currentUserId ? true : false);
+    let isLoggedIn = (state.session.id ? true : false);
     return ({
-        currentUser: (isLoggedIn ? state.entities.currentUser : null),
+        currentUser: (isLoggedIn ? state.entities.users : null),
         shoes: state.entities.shoes,
     });
 };

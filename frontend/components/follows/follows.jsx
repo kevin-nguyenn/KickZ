@@ -46,7 +46,7 @@ class Follows extends React.Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.follows.map(follow => isEmpty(follow) ? null : <FollowItemContainer follow={follow} key={`follow${follow.f_id}`} />)
+                            this.state.follows.map(follow => isEmpty(follow) ? null : <FollowItemContainer follow={follow} key={`follow${follow.follow_id}`} />)
                         }
                     </tbody>
                 </table>

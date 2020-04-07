@@ -7,7 +7,11 @@ const followErrorsReducer = (state = [], action) => {
 
     switch (action.type) {
         case RECEIVE_FOLLOW_ERRORS:
-            return action.errors;
+            if (action.errors) {
+                return null;
+            } else {
+                return state;
+            };
 
         case RECEIVE_FOLLOW:
             return [];

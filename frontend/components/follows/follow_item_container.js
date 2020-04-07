@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import { deleteFollow } from '../../actions/follow_actions';
 import { fetchShoe } from '../../actions/shoe_actions';
+import { fetchOrdersByShoe } from '../../actions/order_actions';
 
-// import FollowItem from './follow_item';
+import FollowItem from './follow_item';
 
 const mapStateToProps = (state, ownProps) => {
     let isLoggedIn = (state.session.id ? true : false);
@@ -15,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
     fetchShoe: (id) => dispatch(fetchShoe(id)),
     deleteFollow: (id) => dispatch(deleteFollow(id)),
+    fetchOrdersByShoe: (id) => dispatch(fetchOrdersByShoe(id))
 });
 
-// export default connect(mapStateToProps, mapDispatchToProps)(FollowItem);
+export default connect(mapStateToProps, mapDispatchToProps)(FollowItem);

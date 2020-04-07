@@ -19,7 +19,7 @@ class Profile extends React.Component {
                 <ProfileNavContainer selected={this.selected} />
                 <div className="profile-contents">
                     <Route exact path="/profile" component={ProfileShowContainer} />
-                    <ProtectedRoute path="/profile/follows" component={FollowsContainer} />
+                    <ProtectedRoute path="/profile/cop-list" component={FollowsContainer} />
                 </div>
             </div>
         )

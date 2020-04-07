@@ -6,7 +6,7 @@ import isEmpty from '../../util/object_api_util';
 class ShoeDetail extends React.Component {
     constructor(props) {
         super(props)
-        console.log(this.props);
+        // console.log(this.props);
 
         this.state = {
             shoeId: this.props.location.pathname.split('/')[2],
@@ -18,7 +18,7 @@ class ShoeDetail extends React.Component {
             lowestAskOrder: ''
         };
 
-        console.log(this.state);
+        // console.log(this.state);
 
         this.handleFollow = this.handleFollow.bind(this);
     }
@@ -73,7 +73,7 @@ class ShoeDetail extends React.Component {
     render() {
         // if (this.props.shoe === undefined) return null;
         let shoe = this.props.shoes[this.state.shoeId] || {};
-        let sales = this.props.sales[this.state.shoeId] ? Object.values(this.props.sales[this.state.productId]) : [];
+        let sales = this.props.sales[this.state.shoeId] ? Object.values(this.props.sales[this.state.shoeId]) : [];
         let orders = isEmpty(this.props.orders) ? [{ price: 0, type: 'buy' }] : Object.values(this.props.orders);
 
         return (
@@ -100,11 +100,11 @@ class ShoeDetail extends React.Component {
                 </span>
 
                 {sales[sales.length - 1] && orders[0] ? 
-                    <SalesInfo shoe={shoe} sales={sales} 
+                    <SalesInfo shoe={shoe} sales={sales}
                         orders={[this.state.highestBid, this.state.lowestAsk]} 
-                        updateOrder={this.props.updateOrder} 
-                        createSale={this.props.createSale} 
-                        currentUserId={this.props.currentUser.id} 
+                        updateOrder={this.props.updateOrder}
+                        createSale={this.props.createSale}
+                        currentUserId={this.props.currentUser.id}
                     /> 
                     : ""
                 }

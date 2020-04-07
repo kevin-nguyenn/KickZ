@@ -41,7 +41,7 @@ class FollowItem extends React.Component {
         return (
             <tr className="fl-row fl-item">
                 <td className="fl-col0">
-                    <Link to="/profile/follows/">
+                    <Link to="/profile/cop-list/">
                         <img className="delete-follow-item-btn" 
                             src="https://image.flaticon.com/icons/png/512/64/64022.png" 
                             onClick={this.handleDelete} height="25px" 

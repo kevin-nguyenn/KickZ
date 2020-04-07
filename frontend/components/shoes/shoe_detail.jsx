@@ -15,33 +15,37 @@ class ShoeDetail extends React.Component {
             highestBidOrder: '',
             lowestAsk: -1,
             lowestAskOrder: ''
-        }
+        };
+
+        console.log(this.state);
+
+        this.handleFollow = this.handleFollow.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchShoe(this.state.shoeId);
-        // this.props.fetchOrdersByShoe(this.state.shoeId).then(data => {
-        //     console.log(data);
-        //     let highestBid = -1;
-        //     let lowestAsk = -1;
-        //     for (const order of Object.values(data.orders)) {
-        //         if (highestBid === -1 && order.order_type === "buy") {
-        //             highestBid = order;
-        //         }
-        //         else if (order.price > highestBid && order.order_type === "buy") {
-        //             highestBid = order;
-        //         }
-        //         if (lowestAsk === -1 && order.order_type === "sell") {
-        //             lowestAsk = order;
-        //         }
-        //         else if (order.price < lowestAsk && order.order_type === "sell") {
-        //             lowestAsk = order;
-        //         }
-        //     };
-        //     this.setState({ highestBid: highestBid, lowestAsk: lowestAsk });
-        // });
-        // this.props.fetchSales(this.state.shoeId);
-        // this.props.fetchLastSale(this.state.shoeId);
+        this.props.fetchOrdersByShoe(this.state.shoeId).then(data => {
+            console.log(data);
+            let highestBid = -1;
+            let lowestAsk = -1;
+            for (const order of Object.values(data.orders)) {
+                if (highestBid === -1 && order.order_type === "buy") {
+                    highestBid = order;
+                }
+                else if (order.price > highestBid && order.order_type === "buy") {
+                    highestBid = order;
+                }
+                if (lowestAsk === -1 && order.order_type === "sell") {
+                    lowestAsk = order;
+                }
+                else if (order.price < lowestAsk && order.order_type === "sell") {
+                    lowestAsk = order;
+                }
+            };
+            this.setState({ highestBid: highestBid, lowestAsk: lowestAsk });
+        });
+        this.props.fetchSales(this.state.shoeId);
+        this.props.fetchLastSale(this.state.shoeId);
         this.props.fetchFollows(this.props.currentUser.id).then(data => {
             for (const follow of Object.values(data.follows)) {
                 if (parseInt(follow.shoe_id) === parseInt(this.state.shoeId)) {
@@ -51,19 +55,19 @@ class ShoeDetail extends React.Component {
         });
     }
 
-    // handleFollow(e) {
-    //     e.preventDefault();
-    //     if (this.state.follows) {
-    //         this.props.deleteFollow(this.state.follow_id);
-    //         this.setState({ follows: false, follow_id: -1 });
-    //     }
-    //     else if (!this.state.follows) {
-    //         this.props.createFollow({ user_id: this.props.currentUser.id, shoe_id: this.state.shoeId })
-    //             .then(data => {
-    //                 this.setState({ follows: true, follow_id: data.follow.id });
-    //         })
-    //     }
-    // }
+    handleFollow(e) {
+        e.preventDefault();
+        if (this.state.follows) {
+            this.props.deleteFollow(this.state.follow_id);
+            this.setState({ follows: false, follow_id: -1 });
+        }
+        else if (!this.state.follows) {
+            this.props.createFollow({ user_id: this.props.currentUser.id, shoe_id: this.state.shoeId })
+                .then(data => {
+                    this.setState({ follows: true, follow_id: data.follow.id });
+            })
+        }
+    }
 
     render() {
         // if (this.props.shoe === undefined) return null;

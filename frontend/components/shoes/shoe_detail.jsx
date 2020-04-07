@@ -1,5 +1,6 @@
 import React from 'react';
 import SalesInfo from './detail_components/sale_info';
+import isEmpty from '../../util/object_api_util';
 
 
 class ShoeDetail extends React.Component {
@@ -72,7 +73,8 @@ class ShoeDetail extends React.Component {
     render() {
         // if (this.props.shoe === undefined) return null;
         let shoe = this.props.shoes[this.state.shoeId] || {};
-
+        let sales = this.props.sales[this.state.shoeId] ? Object.values(this.props.sales[this.state.productId]) : [];
+        let orders = isEmpty(this.props.orders) ? [{ price: 0, type: 'buy' }] : Object.values(this.props.orders);
 
         return (
             <section className="shoe-detail-container">
@@ -96,6 +98,18 @@ class ShoeDetail extends React.Component {
                         <p style={{color: 'green'}}>100% Authentic</p>
                     </span>
                 </span>
+
+                {sales[sales.length - 1] && orders[0] ? 
+                    <SalesInfo shoe={shoe} sales={sales} 
+                        orders={[this.state.highestBid, this.state.lowestAsk]} 
+                        updateOrder={this.props.updateOrder} 
+                        createSale={this.props.createSale} 
+                        currentUserId={this.props.currentUser.id} 
+                    /> 
+                    : ""
+                }
+
+
                 <div className="shoe-detail-img-container">
                     <img src={shoe.photoUrl} alt="" 
                         className="shoe-detail-img"

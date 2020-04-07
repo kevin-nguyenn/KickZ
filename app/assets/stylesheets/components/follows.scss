@@ -16,3 +16,32 @@
   font-family: 'impact';
   font-size: 30px;
 }
+
+.follows-table-heading {
+  font-family: impact;
+  text-transform: uppercase;
+  border-top: 1px solid #c3c3c3;
+  cursor: default;
+}
+
+.follows-table-heading > tr {
+  height: 5vh;
+  color: #333;
+}
+
+.follows-row-cat {
+//   display: flex;
+//   flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.follow-cat0 {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 5px;
+  box-sizing: border-box;
+}

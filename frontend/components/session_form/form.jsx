@@ -237,9 +237,8 @@ class FormContainer extends React.Component {
                         {/* get divider line with 'or' after demo button */}
 
                         <div className="tabContent">
-                            {activeTab === '#/login' 
-                            ?   this.renderLogin()
-                            :   this.renderSignup()
+                            {activeTab === '#/login' ?
+                                this.renderLogin() : this.renderSignup()
                             }
                         </div>
                     </div>

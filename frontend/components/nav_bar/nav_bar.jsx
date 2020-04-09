@@ -56,7 +56,8 @@ class NavBar extends React.Component {
         return (
             <nav className="header-nav">
                 <span className="header-logo-span">
-                    <a href="/" className="header-logo">KickZ</a>
+                    <a href="/" className="header-logo">Kick</a>
+                    <a href="/" className="header-z">Z</a>
                 </span>
 
                 <ul className="header-list">

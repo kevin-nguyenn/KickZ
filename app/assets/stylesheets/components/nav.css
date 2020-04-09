@@ -10,6 +10,13 @@
     color: black;
 }
 
+.header-z {
+    text-decoration: none;
+    color: #08a05c;
+    font-size: 38px;
+    font-weight: 800;
+}
+
 /* .header-nav {
     display: flex;
     background: transparent;

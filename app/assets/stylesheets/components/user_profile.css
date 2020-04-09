@@ -89,6 +89,16 @@
   font-size: 30px;
 }
 
+.profile-gretting {
+  margin-top: 2.5%;
+  font-size: 25px;
+}
+
 .profile-nav-links > a {
   text-decoration: none;
+}
+
+.profile-message {
+  margin-top: 2%;
+  font-size: 18px;
 }

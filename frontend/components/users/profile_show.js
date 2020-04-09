@@ -6,6 +6,7 @@ class ProfileShow extends React.Component {
     };
 
     render() {
+
         return (
             <div className="profile-show">
                 <div className="profile-show-title">
@@ -14,6 +15,13 @@ class ProfileShow extends React.Component {
                 <p className="profile-gretting">
                     Hi, {this.props.currentUser[1].username}.
                     {/* ^^^ might only work for demouser */}
+                </p>
+                <p className="profile-message">
+                    Thank you for visiting KickZ! 
+                    You can find the GitHub repo for KickZ
+                    <a href="https://github.com/kevin-nguyenn/KickZ">
+                        &nbsp;here.
+                    </a>
                 </p>
             </div>
         )

@@ -212,8 +212,11 @@ class FormContainer extends React.Component {
         
         return (
             <div>
-                <header className="form-header-logo">
-                    <a href="/">KickZ</a>
+                <header className="form-logo">
+                    <a href="/" className="form-header-logo">
+                        Kick
+                        <a href="/" className="form-z">Z</a>
+                    </a>
                     {/* renders auth form logo */}
                 </header>
                 <div className="form-container">

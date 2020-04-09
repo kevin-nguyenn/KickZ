@@ -29,7 +29,7 @@ class ProfileNav extends React.Component {
                         <span className="nav-title">Profile</span>
                     </li>
                 </Link>
-                <Link to="/profile/cop-list">
+                <Link to="/profile/cop-list" className="test">
                     <li id="prof-nav-follows" className="profile-nav-item" onClick={this.changeSelected}>
                         <span className="nav-icon-img">🧲</span>
                         <span className="nav-title">Following</span>

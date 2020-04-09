@@ -220,8 +220,6 @@ class FormContainer extends React.Component {
                     {/* <form onSubmit={this.handleSubmit} className="login-form-box"> */}
                     <div className="login-form-box">
                         <div className='tabLinks'>
-                            {/* work on disabling button and figure out way to make 
-                            buttons stationary */}
                             <button id="loginTabLink" className="login-tablink" onClick={this.handleTabClick}>
                                 Log In
                             </button>

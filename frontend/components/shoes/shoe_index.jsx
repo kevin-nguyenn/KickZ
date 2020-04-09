@@ -40,8 +40,8 @@ class ShoeIndex extends React.Component {
                 </div>
                 <div className="index-container">
                     <div className="index-filters">
+                        <div className="filter-cat">Sneakers</div>
                         <div className="filter-options">
-                            <div>Sneakers</div>
                             <br/><br/>
                             <div>Yeezy</div>
                             <div>Jordan</div>

@@ -13,7 +13,7 @@ class Home extends React.Component {
                             <div className="search-bar">
                                 <div className="word-set1">Buy and Sell</div>
                                 <div className="word-set2">Authentic Sneakers</div>
-                                <input type="text" placeholder="Search..." />
+                                <input type="text" placeholder="🔍 Search..." />
                             </div>
                         </span>
                     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import SalesInfo from './detail_components/sale_info';
+import saleOrders from './detail_components/sale_info';
 import isEmpty from '../../util/object_api_util';
 
 
@@ -100,7 +100,7 @@ class ShoeDetail extends React.Component {
                 </span>
 
                 {sales[sales.length - 1] && orders[0] ? 
-                    <SalesInfo shoe={shoe} sales={sales}
+                    <saleOrders shoe={shoe} sales={sales}
                         orders={[this.state.highestBid, this.state.lowestAsk]} 
                         updateOrder={this.props.updateOrder}
                         createSale={this.props.createSale}

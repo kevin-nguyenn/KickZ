@@ -138,46 +138,46 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
     jordan_6s.map! { |shoe| Shoe.create(shoe) };
 
 # #Yeezys
-    # yeezys = [
-    #     {
-    #         name: "adidas Yeezy Boost 350 V2 Lundmark",
-    #         ticker: "350V2-LM",
-    #         price: 284,
-    #         brand: "Yeezy",
-    #         style_code: "FV3254",
-    #         colorway: "lundmark/lundmark/lundmark",
-    #         release_date: "07/11/2019"
-    #     },
-    #     {
-    #         name: "adidas Yeezy Boost 350 Moonrock",
-    #         ticker: "YZY350-MNRCK",
-    #         price: 600,
-    #         brand: "Yeezy",
-    #         style_code: "AQ2660",
-    #         colorway: "agate gray/moonrock-agate gray",
-    #         release_date: "11/14/2015"
-    #     },
-    #     {
-    #         name: "adidas Yeezy Boost 350 V2 Cream/Triple White",
-    #         ticker: "YZY350V2-CRMWHT",
-    #         price: 294,
-    #         brand: "Yeezy",
-    #         style_code: "CP9366",
-    #         colorway: "cream white/cream white",
-    #         release_date: "04/29/2017"
-    #     },
-    #     {
-    #         name: "adidas Yeezy Boost 350 V2 Zebra",
-    #         ticker: "YZY350V2-ZEBRA",
-    #         price: 295,
-    #         brand: "Yeezy",
-    #         style_code: "CP9654",
-    #         colorway: "white/core black/red",
-    #         release_date: "02/25/2017"
-    #     }
-    # ]
+    yeezys = [
+        {
+            name: "adidas Yeezy Boost 350 V2 Lundmark",
+            ticker: "350V2-LM",
+            price: 284,
+            brand: "Yeezy",
+            style_code: "FV3254",
+            colorway: "lundmark/lundmark/lundmark",
+            release_date: "07/11/2019"
+        },
+        # {
+        #     name: "adidas Yeezy Boost 350 Moonrock",
+        #     ticker: "YZY350-MNRCK",
+        #     price: 600,
+        #     brand: "Yeezy",
+        #     style_code: "AQ2660",
+        #     colorway: "agate gray/moonrock-agate gray",
+        #     release_date: "11/14/2015"
+        # },
+        {
+            name: "adidas Yeezy Boost 350 V2 Cream/Triple White",
+            ticker: "YZY350V2-CRMWHT",
+            price: 294,
+            brand: "Yeezy",
+            style_code: "CP9366",
+            colorway: "cream white/cream white",
+            release_date: "04/29/2017"
+        },
+        {
+            name: "adidas Yeezy Boost 350 V2 Zebra",
+            ticker: "YZY350V2-ZEBRA",
+            price: 295,
+            brand: "Yeezy",
+            style_code: "CP9654",
+            colorway: "white/core black/red",
+            release_date: "02/25/2017"
+        }
+    ]
 
-    # yeezys.map! { |shoe| Shoe.create(shoe) };
+    yeezys.map! { |shoe| Shoe.create(shoe) };
 
 
     # mapping image to shoe

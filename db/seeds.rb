@@ -148,15 +148,15 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
             colorway: "lundmark/lundmark/lundmark",
             release_date: "07/11/2019"
         },
-        # {
-        #     name: "adidas Yeezy Boost 350 Moonrock",
-        #     ticker: "YZY350-MNRCK",
-        #     price: 600,
-        #     brand: "Yeezy",
-        #     style_code: "AQ2660",
-        #     colorway: "agate gray/moonrock-agate gray",
-        #     release_date: "11/14/2015"
-        # },
+        {
+            name: "adidas Yeezy Boost 350 Moonrock",
+            ticker: "YZY350-MNRCK",
+            price: 600,
+            brand: "Yeezy",
+            style_code: "AQ2660",
+            colorway: "agate gray/moonrock-agate gray",
+            release_date: "11/14/2015"
+        },
         {
             name: "adidas Yeezy Boost 350 V2 Cream/Triple White",
             ticker: "YZY350V2-CRMWHT",

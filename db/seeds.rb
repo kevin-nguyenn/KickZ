@@ -12,55 +12,55 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
 
 #array of shoe objects
 # Nikes
-    # nikes = [
-    #     {
-    #         name: "Nike Air Presto Off-White",
-    #         ticker: "PRESTO-OFFWHT",
-    #         price: 2000,
-    #         brand: "Nike",
-    #         style_code: "AA3830-001",
-    #         colorway: "black/black-muslin",
-    #         release_date: "09/09/2017"
-    #     },
-    #     {
-    #         name: "Nike Air Presto Off-White White (2018)",
-    #         ticker: "NK-APOWTWT18",
-    #         price: 689,
-    #         brand: "Nike",
-    #         style_code: "AA3830-100",
-    #         colorway: "white/black-cone",
-    #         release_date: "08/03/2018"
-    #     },
-    #     {
-    #         name: "Nike Air Presto Off-White Black (2018)",
-    #         ticker: "NK-APOWBK18",
-    #         price: 689,
-    #         brand: "Nike",
-    #         style_code: "AA3830-002",
-    #         colorway: "black/white-cone",
-    #         release_date: "07/27/2018"
-    #     },
-    #     {
-    #         name: "Nike Air Force 1 Low Supreme White",
-    #         ticker: "AF1L-SUPBLW",
-    #         price: 202,
-    #         brand: "Nike",
-    #         style_code: "CU9225-100",
-    #         colorway: "white/white-white",
-    #         release_date: "03/05/2020"
-    #     },
-    #     {
-    #         name: "Nike Air Vapormax Off White 2018",
-    #         ticker: "VPRMX-OFFWHT-18",
-    #         price: 700,
-    #         brand: "Nike",
-    #         style_code: "AA3831-100",
-    #         colorway: "white/total orange-black",
-    #         release_date: "04/14/2018"
-    #     }
-    # ]
+    nikes = [
+        {
+            name: "Nike Air Presto Off-White",
+            ticker: "PRESTO-OFFWHT",
+            price: 2000,
+            brand: "Nike",
+            style_code: "AA3830-001",
+            colorway: "black/black-muslin",
+            release_date: "09/09/2017"
+        },
+        {
+            name: "Nike Air Presto Off-White White (2018)",
+            ticker: "NK-APOWTWT18",
+            price: 689,
+            brand: "Nike",
+            style_code: "AA3830-100",
+            colorway: "white/black-cone",
+            release_date: "08/03/2018"
+        },
+        {
+            name: "Nike Air Presto Off-White Black (2018)",
+            ticker: "NK-APOWBK18",
+            price: 689,
+            brand: "Nike",
+            style_code: "AA3830-002",
+            colorway: "black/white-cone",
+            release_date: "07/27/2018"
+        },
+        {
+            name: "Nike Air Force 1 Low Supreme White",
+            ticker: "AF1L-SUPBLW",
+            price: 202,
+            brand: "Nike",
+            style_code: "CU9225-100",
+            colorway: "white/white-white",
+            release_date: "03/05/2020"
+        },
+        {
+            name: "Nike Air Vapormax Off White 2018",
+            ticker: "VPRMX-OFFWHT-18",
+            price: 700,
+            brand: "Nike",
+            style_code: "AA3831-100",
+            colorway: "white/total orange-black",
+            release_date: "04/14/2018"
+        }
+    ]
 
-    # nikes.map! { |shoe| Shoe.create(shoe) };
+    nikes.map! { |shoe| Shoe.create(shoe) };
 
 # Jordans
     jordan_1s = [

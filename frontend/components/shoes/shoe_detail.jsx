@@ -105,7 +105,7 @@ class ShoeDetail extends React.Component {
                             Size
                         </label>
                         <div className="size">
-                            10
+                            10 M
                         </div>
                     </div>
                     <button className="shoe-buy">

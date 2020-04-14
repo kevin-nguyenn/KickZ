@@ -7,6 +7,11 @@ class NavBar extends React.Component {
         super(props);
     }
 
+    handleHelp(e) {
+        e.preventDefault();
+        alert(`Don't worry, you can't actually buy anything :).`);
+    }
+
     render() {
         if (this.props.location.pathname === '/login' || this.props.location.pathname === '/signup' )
         {
@@ -17,6 +22,15 @@ class NavBar extends React.Component {
             <li>
                 <span className="nav-link-item">
                     <Link to="/shoes">Browse</Link>
+                    <a href="https://stockx.com/news/">
+                        News
+                    </a>
+                    <a href="https://github.com/kevin-nguyenn" target="_blank">
+                        About
+                    </a>
+                    <a href="#" onClick={this.handleHelp}>
+                        Help
+                    </a>
                 </span>
             </li>
         )

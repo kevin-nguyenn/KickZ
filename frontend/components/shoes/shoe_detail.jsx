@@ -109,7 +109,12 @@ class ShoeDetail extends React.Component {
                         </div>
                     </div>
                     <button className="shoe-buy">
-                        ${shoe.price} | Buy
+                        <div className="price">
+                            ${shoe.price}
+                        </div>
+                        <div className="buy">
+                            Buy
+                        </div>
                     </button>
                     <button className="shoe-sell">
                         Sell

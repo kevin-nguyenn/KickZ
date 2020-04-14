@@ -1,5 +1,5 @@
 import React from 'react';
-import saleOrders from './detail_components/sale_info';
+import SaleOrders from './detail_components/sale_info';
 import isEmpty from '../../util/object_api_util';
 
 
@@ -99,15 +99,32 @@ class ShoeDetail extends React.Component {
                     </span>
                 </span>
 
-                {sales[sales.length - 1] && orders[0] ? 
-                    <saleOrders shoe={shoe} sales={sales}
-                        orders={[this.state.highestBid, this.state.lowestAsk]} 
-                        updateOrder={this.props.updateOrder}
-                        createSale={this.props.createSale}
-                        currentUserId={this.props.currentUser.id}
-                    /> 
-                    : ""
-                }
+                <div className="shoe-order-details">
+                    <div className="options">
+                        <label className="size-label">
+                            Size
+                        </label>
+                        <div className="size">
+                            10
+                        </div>
+                    </div>
+                    <button className="shoe-buy">
+                        ${shoe.price} | Buy
+                    </button>
+                    <button className="shoe-sell">
+                        Sell
+                    </button>
+                    {/* <SaleOrders/> */}
+                    {/* {sales[sales.length - 1] && orders[0] ? 
+                        <SaleOrders shoe={shoe} sales={sales}
+                            orders={[this.state.highestBid, this.state.lowestAsk]} 
+                            updateOrder={this.props.updateOrder}
+                            createSale={this.props.createSale}
+                            currentUserId={this.props.currentUser.id}
+                        /> 
+                        : ""
+                    } */}
+                </div>
 
 
                 <div className="shoe-detail-img-container">

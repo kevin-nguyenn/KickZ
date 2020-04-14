@@ -43,7 +43,7 @@ class FormContainer extends React.Component {
     handleTabClick(e) {
         e.preventDefault();
         const tabId = e.target.id;
-        console.log('tab clicks: ' + e.target.id);
+        // console.log('tab clicks: ' + e.target.id);
 
         if (tabId === 'loginTabLink') {
             window.location.hash = '#/login';
@@ -73,14 +73,14 @@ class FormContainer extends React.Component {
     handleLoginSubmit(e) {
         // e.preventDefault();
         const { loginUser } = this.state;
-        console.log('******* submit login');
+        // console.log('******* submit login');
         dispatch(login(loginUser));
     }
 
     handleSignupSubmit(e) {
         // e.preventDefault();
         const { signupUser } = this.state;
-        console.log('******* submit sign up')
+        // console.log('******* submit sign up')
         dispatch(signup(signupUser));
     }
 
@@ -138,7 +138,7 @@ class FormContainer extends React.Component {
     }
 
     handleDemoClick(e) {
-        console.log('******* demo clicked');
+        // console.log('******* demo clicked');
         const demoUser = {
             username: 'demouser',
             password: 'password'
@@ -205,7 +205,7 @@ class FormContainer extends React.Component {
 
     render() {
         const { activeTab } = this.state;
-        console.log('***** render: ' + JSON.stringify(this.state));
+        // console.log('***** render: ' + JSON.stringify(this.state));
         if (!(this.props.location.pathname === '/login' || this.props.location.pathname === '/signup')) {
             return null;
         }

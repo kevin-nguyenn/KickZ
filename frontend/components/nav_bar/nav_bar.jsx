@@ -15,7 +15,9 @@ class NavBar extends React.Component {
         
         const showNavLinks = (
             <li>
-                <span className="nav-link-item"><Link to="/shoes">Browse</Link></span>
+                <span className="nav-link-item">
+                    <Link to="/shoes">Browse</Link>
+                </span>
             </li>
         )
 
@@ -24,14 +26,16 @@ class NavBar extends React.Component {
                 { showNavLinks }
                 <div className="nav-dropdown">
                     <li className="nav-link-account">
-                        <span className="nav-link-item"><Link to="/profile">My Account</Link></span>
+                        <span className="nav-link-item">
+                            <Link to="/profile">My Account</Link>
+                        </span>
                     </li>
                     <div className="nav-dropdown-items">
-                        <a href="#">Buying</a>
-                        <a href="#">Selling</a>
+                        {/* <a href="#">Buying</a> */}
+                        {/* <a href="#">Selling</a> */}
                         <Link to="/profile">Profile</Link>
                         <Link to="/profile/cop-list">Following</Link>
-                        <a href="#">Portfolio</a>
+                        {/* <a href="#">Portfolio</a> */}
                         <a href="#" onClick={this.props.logout}>Logout</a>
                     </div>
                 </div>

@@ -83,7 +83,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    max-width: 60%;
+    max-width: 52%;
     /* margin: 0% 20% 0%; */
 }
 

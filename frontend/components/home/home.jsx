@@ -11,7 +11,7 @@ class Home extends React.Component {
 
     handleSearch(e) {
         e.preventDefault();
-        let searchTerm = document.getElementById("navbar-search").value;
+        let searchTerm = document.getElementById("search").value;
         if (searchTerm.length < 2) {
             window.location.hash = "#/shoes";
         } else {
@@ -25,7 +25,7 @@ class Home extends React.Component {
             <div>
             <div className="search-container">
                 <div className="search-background">
-                    <span className="background">
+                    <span id="search" className="background">
                         <div className="search-bar">
                             <div className="word-set1">Buy and Sell</div>
                             <div className="word-set2">Authentic Sneakers</div>

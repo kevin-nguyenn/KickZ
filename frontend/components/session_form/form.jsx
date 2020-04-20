@@ -144,7 +144,9 @@ class FormContainer extends React.Component {
             password: 'password'
         };
 
-        dispatch(login(demoUser));
+        // dispatch(login(demoUser));
+        this.props.login(demoUser);
+        this.props.history.push("/profile");
     }
 
     renderLogin() {

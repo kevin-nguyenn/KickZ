@@ -10,7 +10,7 @@ class ProfileNav extends React.Component {
     }
 
     componentDidMount() {
-        $(document.getElementById(`prof-nav-${this.props.selected}`)).addClass('profile-selected');
+        $(document.getElementById(`profile-nav-${this.props.selected}`)).addClass('profile-selected');
     }
 
     changeSelected(e) {
@@ -22,14 +22,16 @@ class ProfileNav extends React.Component {
     render() {
         return (
             <ul className="profile-nav-links">
-                <span className="profile-nav-name">{this.props.currentUser ? this.props.currentUser[1].username : ""}</span>
+                <span className="profile-nav-name">
+                    {this.props.currentUser ? this.props.currentUser[1].username : ""}
+                </span>
                 <Link to="/profile">
                     <li id="prof-nav-profile" className="profile-nav-item" onClick={this.changeSelected}>
                         <span className="nav-icon-img">😎</span>
                         <span className="nav-title">Profile</span>
                     </li>
                 </Link>
-                <Link to="/profile/cop-list" className="test">
+                <Link to="/profile/cop-list">
                     <li id="prof-nav-follows" className="profile-nav-item" onClick={this.changeSelected}>
                         <span className="nav-icon-img">🧲</span>
                         <span className="nav-title">Following</span>

@@ -5,6 +5,7 @@ import ShoeIndexItem from './shoe_index_item'
 class ShoesSearch extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             shoes: this.props.shoes,
             searchTerms: []
@@ -14,6 +15,7 @@ class ShoesSearch extends React.Component {
     componentDidMount() {
         this.props.fetchShoes()
             .then(action => this.setState({ shoes: action.shoes }));
+            
         if (window.location.searchCache) {
             let newState = Object.assign({}, this.state);
             newState.searchTerms = [];
@@ -30,7 +32,6 @@ class ShoesSearch extends React.Component {
         let terms = this.state.searchTerms;
         terms = terms.map((word) => word.toLowerCase());
         for (let shoe of shoes) {
-
             for (let name of shoe.name.toLowerCase().split(' ')) {
                 if (terms.includes(name)) {
                     if (!filtered.includes(shoe)) filtered.push(shoe);
@@ -77,7 +78,7 @@ class ShoesSearch extends React.Component {
     }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         let shoes = Object.values(this.state.shoes);
         if (this.state.searchTerms.length > 0) {
             shoes = this.filterShoes(shoes);

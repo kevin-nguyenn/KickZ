@@ -7,13 +7,15 @@ class ShoeIndex extends React.Component {
         super(props);
 
         this.state = {
-            shoes: this.props.shoes
+            shoes: this.props.shoes,
+            searchTerms: []
         }
     }
 
     componentDidMount() {
         this.props.fetchShoes()
-            .then(action => this.setState({ shoes: action.shoes }));
+            .then(action => this.setState({ shoes: action.shoes })
+        );
     }
 
     render() {

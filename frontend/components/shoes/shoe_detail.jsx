@@ -100,8 +100,8 @@ class ShoeDetail extends React.Component {
                 </span>
 
                 <div className="shoe-order-details">
-                    <div className="options">
-                        <label className="size-label">
+                    {/* <div className="options"> */}
+                        {/* <label className="size-label">
                             Size
                         </label>
                         <div className="size">
@@ -118,9 +118,9 @@ class ShoeDetail extends React.Component {
                     </button>
                     <button className="shoe-sell">
                         Sell
-                    </button>
-                    {/* <SaleOrders/> */}
-                    {/* {sales[sales.length - 1] && orders[0] ? 
+                    </button> */}
+
+                    {sales[sales.length - 1] && orders[0] ? 
                         <SaleOrders shoe={shoe} sales={sales}
                             orders={[this.state.highestBid, this.state.lowestAsk]} 
                             updateOrder={this.props.updateOrder}
@@ -128,7 +128,7 @@ class ShoeDetail extends React.Component {
                             currentUserId={this.props.currentUser.id}
                         /> 
                         : ""
-                    } */}
+                    }
                 </div>
 
 

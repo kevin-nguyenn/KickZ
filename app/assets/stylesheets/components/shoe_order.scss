@@ -1,81 +1,243 @@
-// .shoe-orders {
-//   margin-top: 20px;
+.shoe-orders {
+  margin-top: 20px;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70vw;
+  font-family: 'proxima-nova', sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  color: #888888;
+}
+
+.shoe-orders-size {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.shoe-orders-size > p {
+  font-weight: bold;
+}
+
+.shoe-orders-size > span {
+  font-size: 30px;
+  color: black;
+  padding-top: 5px;
+}
+
+.style-line {
+  height: 100px;
+  width: 1px;
+  background-color: #c3c3c3;
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.shoe-orders-last-sale {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  width: 15%;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-sale-bold {
+  font-weight: bold;
+}
+
+.last-sale-num {
+  color: black;
+  font-size: 28px;
+}
+
+.last-sale-change {
+  font-size: 16px;
+}
+
+.shoe-last-sale-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+.shoe-asks {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoe-asks > a {
+  display: flex;
+  flex-direction: row;
+  background-color: #08a05c;
+  width: 220px;
+  height: 80px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.shoe-asks > a:hover {
+  background-color: green;
+}
+
+.asks-left > p {
+  color: #c6e6c2;
+  font-size: 18px;
+}
+
+.asks-left > .shoe-ask-price {
+  color: white;
+  font-size: 30px;
+}
+
+.asks-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  border-left: 1px solid green;
+  height: 70%;
+}
+
+.asks-right-big {
+  color: white;
+  font-size: 30px;
+}
+
+.asks-right-small {
+  color: #c6e6c2;
+  font-size: 18px;
+}
+
+.shoe-bids {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoe-bids > a {
+  display: flex;
+  flex-direction: row;
+  background-color: #ff5a5f;
+  width: 220px;
+  height: 80px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.shoe-bids > a:hover {
+  background-color: red;
+}
+
+#bids-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+
+.bids-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  border-left: 1px solid #cc4c4c;
+  height: 70%;
+}
+
+.bids-right-big {
+  color: white;
+  font-size: 30px;
+}
+
+.bids-right-small {
+  color: #ffcfcf;
+  font-size: 18px;
+}
+
+// .shoe-order-details {
+//   margin-left: 20%;
+//   margin-top: 2%;
 //   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   width: 70vw;
-//   font-family: 'proxima-nova', sans-serif;
-//   letter-spacing: 1px;
-//   font-size: 16px;
-//   color: #888888;
 // }
 
-.shoe-order-details {
-  margin-left: 20%;
-  margin-top: 2%;
-  display: flex;
-}
+// .options {
+//   border-right: 1px solid #ccc;
+//   padding-right: 20px;
+// }
 
-.options {
-  border-right: 1px solid #ccc;
-  padding-right: 20px;
-}
+// .size-label {
+//   font-size: 20px;
+//   color: #999;
+//   margin: 0;
+//   white-space: nowrap;
+//   font-family: proxima-nova,sans-serif;
+// }
 
-.size-label {
-  font-size: 20px;
-  color: #999;
-  margin: 0;
-  white-space: nowrap;
-  font-family: proxima-nova,sans-serif;
-}
+// .size {
+//   font-size: 30px;
+//   font-family: proxima-nova,sans-serif;
+//   font-weight: 500;
+//   text-transform: capitalize;
+//   white-space: normal;
+//   text-align: left;
+//   letter-spacing: 0;
+//   margin-top: 5px;
+// }
 
-.size {
-  font-size: 30px;
-  font-family: proxima-nova,sans-serif;
-  font-weight: 500;
-  text-transform: capitalize;
-  white-space: normal;
-  text-align: left;
-  letter-spacing: 0;
-  margin-top: 5px;
-}
+// .shoe-buy {
+//   display: flex;
+//   margin-right: 25px;
+//   margin-left: 25px;
+//   background-color: #08a05c;
+//   border-bottom: 4px solid #08a05c;
+//   width: 190px;
+//   height: 60px;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   font-size: 30px;
+//   font-weight: 500;
+//   color: #fff;
+//   cursor: pointer;
+// }
 
-.shoe-buy {
-  display: flex;
-  margin-right: 25px;
-  margin-left: 25px;
-  background-color: #08a05c;
-  border-bottom: 4px solid #08a05c;
-  width: 190px;
-  height: 60px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
-  cursor: pointer;
-}
+// .price {
+//   border-right: 1px solid rgba(0,0,0,.25);
+//   padding-right: 10px;
+//   height: 40px;
+// }
 
-.price {
-  border-right: 1px solid rgba(0,0,0,.25);
-  padding-right: 10px;
-  height: 40px;
-}
+// .buy {
+//   padding-left: 10px;
+// }
 
-.buy {
-  padding-left: 10px;
-}
-
-.shoe-sell {
-  margin-right: 25px;
-  background-color: #ff5a5f;
-  border-bottom: 4px solid #ff5a5f;
-  width: 190px;
-  height: 60px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
-  cursor: pointer;
-}
+// .shoe-sell {
+//   margin-right: 25px;
+//   background-color: #ff5a5f;
+//   border-bottom: 4px solid #ff5a5f;
+//   width: 190px;
+//   height: 60px;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   font-size: 30px;
+//   font-weight: 500;
+//   color: #fff;
+//   cursor: pointer;
+// }

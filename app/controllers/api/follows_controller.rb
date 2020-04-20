@@ -6,6 +6,8 @@ class Api::FollowsController < ApplicationController
 
     def create
         @follow = Follow.new(follow_params)
+        @follow.user_id = follow_params[:user_id]
+        @follow.shoe_id = follow_params[:shoe_id]
 
         if @follow.save
             render :show

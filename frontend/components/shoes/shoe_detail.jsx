@@ -63,7 +63,7 @@ class ShoeDetail extends React.Component {
             this.setState({ follows: false, follow_id: -1 });
         }
         else if (!this.state.follows) {
-            this.props.createFollow({ user_id: this.props.currentUser.id, shoe_id: this.state.shoeId })
+            this.props.createFollow({ user_id: Object.keys(this.props.currentUser)[0], shoe_id: this.state.shoeId })
                 .then(data => {
                     this.setState({ follows: true, follow_id: data.follow.id });
             })

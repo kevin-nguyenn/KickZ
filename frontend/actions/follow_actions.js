@@ -32,8 +32,12 @@ export const fetchFollows = (user_id) => dispatch => {
 
 export const createFollow = id => dispatch => {
     return FollowsAPIUtil.createFollow(id)
-        .then(follow => dispatch(receiveFollow(follow)), 
-        errors => dispatch(receiveFollowErrors(errors.responseJSON)));
+        .then(follow => {
+            return dispatch(receiveFollow(follow))
+        }, 
+        errors => {
+            return dispatch(receiveFollowErrors(errors.responseJSON))
+        });
 }
 
 export const deleteFollow = id => dispatch => {

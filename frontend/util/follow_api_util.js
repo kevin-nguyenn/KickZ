@@ -5,13 +5,13 @@ export const fetchFollows = (user_id) => (
     })
 );
 
-export const createFollow = (follow) => (
-    $.ajax({
+export const createFollow = (follow) => {
+    return $.ajax({
         method: 'POST',
-        url: '/api/cop-list',
+        url: '/api/follows',
         data: { follow }
     })
-);
+};
 
 export const deleteFollow = (id) => (
     $.ajax({

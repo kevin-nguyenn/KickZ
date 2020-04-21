@@ -100,26 +100,6 @@ class ShoeDetail extends React.Component {
                 </span>
 
                 <div className="shoe-order-details">
-                    {/* <div className="options"> */}
-                        {/* <label className="size-label">
-                            Size
-                        </label>
-                        <div className="size">
-                            10 M
-                        </div>
-                    </div>
-                    <button className="shoe-buy">
-                        <div className="price">
-                            ${shoe.price}
-                        </div>
-                        <div className="buy">
-                            Buy
-                        </div>
-                    </button>
-                    <button className="shoe-sell">
-                        Sell
-                    </button> */}
-
                     {sales[sales.length - 1] && orders[0] ? 
                         <SaleOrders shoe={shoe} sales={sales}
                             orders={[this.state.highestBid, this.state.lowestAsk]} 

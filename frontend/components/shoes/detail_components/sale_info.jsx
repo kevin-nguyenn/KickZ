@@ -125,14 +125,8 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
                     </span>
                     <span className="asks-right">
                         <p className="asks-right-big">Buy</p>
-                        {/* <p className="asks-right-small">or Bid</p> */}
                     </span>
                 </Link>
-                <span className="asks-bottom">
-                    {/* <p>Size 10</p>
-                    <span className="small-style-line"></span>
-                    <p>View All Asks</p> */}
-                </span>
             </span>
             <span className="shoe-bids">
                 <Link to="#" className="shoe-buttons" onClick={() => handleSell()}>
@@ -144,14 +138,8 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
                     </span>
                     <span className="bids-right">
                         <p className="bids-right-big">Sell</p>
-                        {/* <p className="bids-right-small">or Ask</p> */}
                     </span>
                 </Link>
-                <span className="bids-bottom">
-                    {/* <p>Size 10</p>
-                    <span className="small-style-line"></span>
-                    <p>View All Bids</p> */}
-                </span>
             </span>
         </div>
     )

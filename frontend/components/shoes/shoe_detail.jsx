@@ -26,7 +26,7 @@ class ShoeDetail extends React.Component {
     componentDidMount() {
         this.props.fetchShoe(this.state.shoeId);
         this.props.fetchOrdersByShoe(this.state.shoeId).then(data => {
-            console.log(data);
+            // console.log(data);
             let highestBid = -1;
             let lowestAsk = -1;
             for (const order of Object.values(data.orders)) {

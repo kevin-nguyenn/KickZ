@@ -26,7 +26,7 @@ class FollowItem extends React.Component {
                 else if (order.order_type === 'sell' && order.price < newState.lowestAsk) newState.lowestAsk = order.price;
             }
             this.setState(newState);
-            console.dir(this.state);
+            // console.dir(this.state);
         })
     }
 

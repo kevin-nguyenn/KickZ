@@ -116,12 +116,12 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
                 </span>
             </span>
             <span className="shoe-asks">
-                <Link to="#" onClick={() => handleBuy()}>
+                <Link to="#" className="shoe-buttons" onClick={() => handleBuy()}>
                     <span className="asks-left">
                         <p className="shoe-ask-price">
                             {lowestAsk === -1 ? `N/A` : `$${lowestAsk}`}
                         </p>
-                        <p>Lowest Ask</p>
+                        <p className="asks-left-small">Lowest Ask</p>
                     </span>
                     <span className="asks-right">
                         <p className="asks-right-big">Buy</p>
@@ -135,7 +135,7 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
                 </span>
             </span>
             <span className="shoe-bids">
-                <Link to="#" onClick={() => handleSell()}>
+                <Link to="#" className="shoe-buttons" onClick={() => handleSell()}>
                     <span shoe="bids-left">
                         <p className="bids-right-big">
                             {highestBid === -1 ? `N/A` : `$${highestBid}`}

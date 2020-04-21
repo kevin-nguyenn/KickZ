@@ -73,6 +73,10 @@
   align-items: center;
 }
 
+.shoe-buttons {
+  text-decoration: none;
+}
+
 .shoe-asks > a {
   display: flex;
   flex-direction: row;
@@ -99,6 +103,10 @@
   font-size: 30px;
 }
 
+.asks-left-small {
+  margin-right: 10px;
+}
+
 .asks-right {
   display: flex;
   flex-direction: column;
@@ -112,11 +120,6 @@
 .asks-right-big {
   color: white;
   font-size: 30px;
-}
-
-.asks-right-small {
-  color: #c6e6c2;
-  font-size: 18px;
 }
 
 .shoe-bids {
@@ -170,6 +173,7 @@
 .bids-right-small {
   color: #ffcfcf;
   font-size: 18px;
+  margin-right: 10px;
 }
 
 // .shoe-order-details {

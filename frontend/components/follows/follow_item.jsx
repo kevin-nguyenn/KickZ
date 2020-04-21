@@ -39,8 +39,8 @@ class FollowItem extends React.Component {
         let product = this.state.follow;
         if (isEmpty(product)) return (null);
         return (
-            <tr className="fl-row fl-item">
-                <td className="fl-col0">
+            <tr className="follow-row-cat fl-item">
+                <td className="follow-cat0">
                     <Link to="/profile/cop-list/">
                         <img className="delete-follow-item-btn" 
                             src="https://image.flaticon.com/icons/png/512/64/64022.png" 
@@ -49,7 +49,7 @@ class FollowItem extends React.Component {
                     </Link>
                 </td>
 
-                <td className="fl-col1 fl-item-info">
+                <td className="follow-cat1 fl-item-info">
                     <span className="fl-item-pic">
                         <img src={shoe.photoUrl} width="80px" />
                     </span>
@@ -60,12 +60,12 @@ class FollowItem extends React.Component {
                         </ul>
                     </Link>
                 </td>
-                <td className="fl-col2">
+                <td className="follow-cat2">
                     <p>
                         {this.state.highestBid === -1 ? 'N/A' : `$${this.state.highestBid}`}
                     </p>
                 </td>
-                <td className="fl-col3">
+                <td className="follow-cat3">
                     <p>
                         {this.state.lowestAsk === 20000 ? 'N/A' : `$${this.state.lowestAsk}`}
                     </p>

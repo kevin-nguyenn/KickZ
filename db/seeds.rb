@@ -8,6 +8,7 @@
 require 'open-uri'
 
 demo_user = User.create(username: "demouser", email: "demouser@kickz.io", password: "password")
+seed_user = User.create(username: "seeduser", email: "seeduser@kickz.io", password: "password")
 # Add brand column to shoes table & add brands to each shoe data
 
 #array of shoe objects
@@ -193,11 +194,35 @@ demo_user = User.create(username: "demouser", email: "demouser@kickz.io", passwo
     end
 
 order1 = Order.create!(
-    shoe_id: Shoe.all[0].id, seller_id: User.all[0].id, price: 550, order_type: 'buy', 
+    shoe_id: Shoe.all[0].id, seller_id: User.all[1].id, price: 2100, order_type: 'buy', 
     active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
 )
 order2 = Order.create!(
-    shoe_id: Shoe.all[1].id, seller_id: User.all[0].id, price: 600, order_type: 'buy', 
+    shoe_id: Shoe.all[1].id, seller_id: User.all[1].id, price: 700, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order3 = Order.create!(
+    shoe_id: Shoe.all[2].id, seller_id: User.all[1].id, price: 700, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order4 = Order.create!(
+    shoe_id: Shoe.all[3].id, seller_id: User.all[1].id, price: 210, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order5 = Order.create!(
+    shoe_id: Shoe.all[4].id, seller_id: User.all[1].id, price: 750, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order6 = Order.create!(
+    shoe_id: Shoe.all[5].id, seller_id: User.all[1].id, price: 550, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order7 = Order.create!(
+    shoe_id: Shoe.all[6].id, seller_id: User.all[1].id, price: 280, order_type: 'buy', 
+    active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
+)
+order8 = Order.create!(
+    shoe_id: Shoe.all[7].id, seller_id: User.all[1].id, price: 200, order_type: 'buy', 
     active: 'true', sold: 'false', shipped: 'false', sex: 'M', size: '10'
 )
 
@@ -210,4 +235,34 @@ sale2 = Sale.create!(
     order_id: order2.id, shoe_id: order2.shoe_id, sex: order2.sex, 
     size: order2.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
     price: order2.price
+)
+sale3 = Sale.create!(
+    order_id: order3.id, shoe_id: order3.shoe_id, sex: order3.sex, 
+    size: order3.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order3.price
+)
+sale4 = Sale.create!(
+    order_id: order4.id, shoe_id: order4.shoe_id, sex: order4.sex, 
+    size: order4.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order4.price
+)
+sale5 = Sale.create!(
+    order_id: order5.id, shoe_id: order5.shoe_id, sex: order5.sex, 
+    size: order5.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order5.price
+)
+sale6 = Sale.create!(
+    order_id: order6.id, shoe_id: order6.shoe_id, sex: order6.sex, 
+    size: order6.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order6.price
+)
+sale7 = Sale.create!(
+    order_id: order7.id, shoe_id: order7.shoe_id, sex: order7.sex, 
+    size: order7.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order7.price
+)
+sale8 = Sale.create!(
+    order_id: order8.id, shoe_id: order8.shoe_id, sex: order8.sex, 
+    size: order8.size, date: Date.today.to_s.split('-').join('/'), active: 'true', 
+    price: order8.price
 )

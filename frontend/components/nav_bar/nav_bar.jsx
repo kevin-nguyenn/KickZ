@@ -45,8 +45,7 @@ class NavBar extends React.Component {
                         </span>
                     </li>
                     <div className="nav-dropdown-items">
-                        {/* <a href="#">Buying</a> */}
-                        {/* <a href="#">Selling</a> */}
+                        <Link to="/profile/listings">Listings</Link>
                         <Link to="/profile">Profile</Link>
                         <Link to="/profile/cop-list">Following</Link>
                         {/* <a href="#">Portfolio</a> */}

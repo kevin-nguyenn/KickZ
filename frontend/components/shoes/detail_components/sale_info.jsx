@@ -109,11 +109,6 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
                         {`${pricing(lastDiff)} (${Math.round((lastDiff * 100) / sales[salesEnd - 1].price)}%)`}
                     </p>
                 </span>
-                <span className="shoe-last-sale-bottom">
-                    {/* <p>Size {sales[salesEnd].size}</p>
-                    <span className="small-style-line"></span>
-                    <p>View All Sales</p> */}
-                </span>
             </span>
             <span className="shoe-asks">
                 <Link to="#" className="shoe-buttons" onClick={() => handleBuy()}>

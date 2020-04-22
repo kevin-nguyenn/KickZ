@@ -25,6 +25,12 @@ class ProfileNav extends React.Component {
                 <span className="profile-nav-name">
                     {this.props.currentUser ? this.props.currentUser[1].username : ""}
                 </span>
+                <Link to="/profile/listings">
+                    <li id="prof-nav-listings" className="profile-nav-item" onClick={this.changeSelected}>
+                        <span className="nav-icon-img">💵</span>
+                        <span className="nav-title">Listings</span>
+                    </li>
+                </Link>
                 <Link to="/profile">
                     <li id="prof-nav-profile" className="profile-nav-item" onClick={this.changeSelected}>
                         <span className="nav-icon-img">😎</span>

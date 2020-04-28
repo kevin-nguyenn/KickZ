@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
         currentUser: (isLoggedIn ? state.entities.users : null),
         shoes: state.entities.shoes,
         orders: state.entities.orders,
-        sales: state.entities.sales
+        // sales: state.entities.sales
     });
 };
 

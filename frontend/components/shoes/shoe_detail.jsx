@@ -47,7 +47,7 @@ class ShoeDetail extends React.Component {
         });
         this.props.fetchSales(this.state.shoeId);
         this.props.fetchLastSale(this.state.shoeId);
-        this.props.fetchFollows(this.props.currentUser.id).then(data => {
+        this.props.fetchFollows(this.props.currentUser[0]).then(data => {
             for (const follow of Object.values(data.follows)) {
                 if (parseInt(follow.shoe_id) === parseInt(this.state.shoeId)) {
                     this.setState({ follows: true, follow_id: follow.id });

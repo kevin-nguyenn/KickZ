@@ -1,5 +1,5 @@
 class Api::SalesController < ApplicationController
-    def shoe_sales_index
+    def shoe_index
         @sales = Shoe.find(params[:shoe_id]).sales
         render :index
     end

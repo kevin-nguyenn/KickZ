@@ -1,6 +1,6 @@
 class Api::FollowsController < ApplicationController
     def user_index
-        @follows = current_user.follows
+        @follows = @current_user.follows
         render :index
     end
 

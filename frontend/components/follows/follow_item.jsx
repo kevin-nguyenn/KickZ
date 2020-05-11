@@ -36,8 +36,8 @@ class FollowItem extends React.Component {
     }
 
     render() {
-        let product = this.state.follow;
-        if (isEmpty(product)) return (null);
+        let shoe = this.state.follow;
+        if (isEmpty(shoe)) return (null);
         return (
             <tr className="follow-row-cat fl-item">
                 <td className="follow-cat0">

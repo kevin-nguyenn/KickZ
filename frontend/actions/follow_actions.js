@@ -29,11 +29,11 @@ export const fetchFollows = (user_id) => dispatch => {
     return FollowsAPIUtil.fetchFollows(user_id)
         .then(
             follows => {
-                debugger;
+                // debugger;
                 return dispatch(receiveFollows(follows));
             },
             errors => {
-                debugger;
+                // debugger;
                 return dispatch(receiveFollowErrors(errors.responseJSON))
             }
         );

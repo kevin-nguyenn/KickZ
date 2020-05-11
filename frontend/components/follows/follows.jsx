@@ -17,15 +17,13 @@ class Follows extends React.Component {
         this.props.fetchShoes()
             .then(() => this.props.fetchFollows(this.props.currentUser.id)
                 .then((data) => {
-                    // console.dir(data);
+                    console.dir(data);
                     for (let follow of Object.values(data.follows)) {
                         let shoe = Object.assign({}, this.props.shoes[follow.shoe_id]);
                         shoe.follow_id = follow.id;
                         follows.push(shoe);
                     }
                     this.setState({ follows: follows });
-                    // console.log(this.state);
-                    // console.log(data.follows);
                 })
             );
     }

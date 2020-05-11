@@ -39,7 +39,7 @@ class FollowItem extends React.Component {
         let shoe = this.state.follow;
         if (isEmpty(shoe)) return (null);
         return (
-            <tr className="follow-row-cat fl-item">
+            <tr className="follows-row-cat fl-item">
                 <td className="follow-cat0">
                     <Link to="/profile/cop-list/">
                         <img className="delete-follow-item-btn" 
@@ -55,7 +55,6 @@ class FollowItem extends React.Component {
                     </span>
                     <Link to={`/shoes/${shoe.id}`}>
                         <ul className="fl-item-details">
-                            <li>{shoe.model}</li>
                             <li>{shoe.name}</li>
                         </ul>
                     </Link>

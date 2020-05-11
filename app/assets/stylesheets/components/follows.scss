@@ -55,7 +55,6 @@
 .follow-cat1 {
   width: 20%;
   display: flex;
-
 }
 
 .follow-cat2 {
@@ -70,17 +69,18 @@
   justify-content: center;
 }
 
-// .fl-item-info {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-// }
+.fl-item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-// .fl-item-pic {
-//   margin-right: 2%;
-// }
+.fl-item-pic {
+  margin-right: 2%;
+  margin-top: 5%;
+}
 
-// .fl-item-details {
-//   display: flex;
-//   flex-direction: column;
-// }
+.fl-item-details {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,5 +1,8 @@
 class Api::FollowsController < ApplicationController
-    def user_index
+    before_action :require_logged_in
+
+    def index
+        # debugger
         @follows = @current_user.follows
         render :index
     end

@@ -1,7 +1,7 @@
 export const fetchFollows = (user_id) => (
     $.ajax({
         method: 'GET',
-        url: `/api/follows/${user_id.id}`
+        url: `/api/follows`
     })
 );
 

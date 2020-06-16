@@ -83,7 +83,8 @@
 
 .login-tablink {
     border-width: 0px;
-    border-bottom: 2px solid #010101;
+    border-bottom: 1px solid #010101;
+    border-right: 1px solid white;
     height: 50px;
     width: 100%;
     padding: 14px;
@@ -92,7 +93,8 @@
 
 .signup-tablink {
     border-width: 0px;
-    border-bottom: 2px solid #010101;
+    border-bottom: 1px solid #010101;
+    border-left: 1px solid white;
     height: 50px;
     width: 100%;
     padding: 14px;

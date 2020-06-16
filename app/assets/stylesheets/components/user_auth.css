@@ -37,8 +37,8 @@
     height: 23px;
     /* background: #FFFFFF; */
     margin: 15px 22.5px;
-    padding: 16px 10px 5px;
-    font-size: 16px;
+    padding: 10px 10px 5px;
+    font-size: 20px;
     font-weight: 250;
     font-family: 'proxima-nova', sans-serif;
 }
@@ -62,16 +62,14 @@
 .demo-button {
     width: 349px;
     height: 50px;
-    font-size: 14px;
+    font-size: 18px;
     background-color: #3b5998;
     color: #FFFFFF;
     border-radius: 2px;
 }
 
 .form-submit {
-    width: 349px;
-    font-size: 18px;
-    height: 20%;
+    font-size: 20px;
     margin-left: 6%;
 }
 

@@ -8,83 +8,109 @@ class ShoesSearch extends React.Component {
 
         this.state = {
             shoes: this.props.shoes,
-            searchTerms: []
+            filtered: []
         }
+        this.filter = this.filterShoes.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchShoes()
-            .then(action => this.setState({ shoes: action.shoes }));
+        // this.props.fetchShoes()
+        //     .then(action => this.setState({ shoes: action.shoes }));
             
-        if (window.location.searchCache) {
-            let newState = Object.assign({}, this.state);
-            newState.searchTerms = [];
-            for (let word of window.location.searchCache.split(' ')) {
-                newState.searchTerms.push(word);
-            }
-            delete window.location.searchCache;
-            this.setState(newState);
-        };
+        // if (window.location.searchCache) {
+        //     let newState = Object.assign({}, this.state);
+        //     newState.searchTerms = [];
+        //     for (let word of window.location.searchCache.split(' ')) {
+        //         newState.searchTerms.push(word);
+        //     }
+        //     delete window.location.searchCache;
+        //     this.setState(newState);
+        // };
+        if (this.props.shoes) {
+            this.setState({ shoes: this.props.shoes })
+            this.filterShoes();
+        } else {
+            this.props.fetchShoes()
+                .then(action => this.setState({ shoes: action.shoes }))
+                .then(() => this.filterShoes());
+        }
+
+
+        let searchBar = document.getElementById('search-input');
+        searchBar.addEventListener('keyup', this.filter);
     }
 
-    filterShoes(shoes) {
+    componentWillUnmount() {
+        let searchBar = document.getElementById('search-input');
+        searchBar.removeEventListener('keyup', this.filterShoes);
+    }
+
+    filterShoes() {
+        let shoes = Object.values(this.state.shoes);
         let filtered = [];
-        let terms = this.state.searchTerms;
-        terms = terms.map((word) => word.toLowerCase());
-        for (let shoe of shoes) {
-            for (let name of shoe.name.toLowerCase().split(' ')) {
-                if (terms.includes(name)) {
-                    if (!filtered.includes(shoe)) filtered.push(shoe);
+        let terms = document.getElementById('search-input').value.split(' ');
+        if (terms.length === 0) filtered = shoes;
+        else {
+            terms = terms.map((word) => word.toLowerCase());
+            for (let shoe of shoes) {
+                for (let name of shoe.name.toLowerCase().split(' ')) {
+                    if (terms.includes(name)) {
+                        if (!filtered.includes(shoe)) filtered.push(shoe);
 
-                    break;
-                }
+                        break;
+                    }
+                };
+
+                for (let ticker of shoe.ticker.toLowerCase().split('')) {
+                    if (terms.includes(ticker)) {
+                        if (!filtered.includes(shoe)) filtered.push(shoe);
+
+                        break;
+                    }
+                };
+
+                for (let brand of shoe.brand.toLowerCase().split(' ')) {
+                    if (terms.includes(brand)) {
+                        if (!filtered.includes(shoe)) filtered.push(shoe);
+
+                        break;
+                    }
+                };
+
+                for (let colorway of shoe.colorway.toLowerCase().split(' ')) {
+                    if (terms.includes(colorway)) {
+                        if (!filtered.includes(shoe)) filtered.push(shoe);
+
+                        break;
+                    }
+                };
+
+                for (let style_code of shoe.style_code.toLowerCase().split(' ')) {
+                    if (terms.includes(style_code)) {
+                        if (!filtered.includes(shoe)) filtered.push(shoe);
+
+                        break;
+                    }
+                };
+
             };
+        }
 
-            for (let ticker of shoe.ticker.toLowerCase().split('')) {
-                if (terms.includes(ticker)) {
-                    if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                    break;
-                }
-            };
-
-            for (let brand of shoe.brand.toLowerCase().split(' ')) {
-                if (terms.includes(brand)) {
-                    if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                    break;
-                }
-            };
-
-            for (let colorway of shoe.colorway.toLowerCase().split(' ')) {
-                if (terms.includes(colorway)) {
-                    if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                    break;
-                }
-            };
-
-            for (let style_code of shoe.style_code.toLowerCase().split(' ')) {
-                if (terms.includes(style_code)) {
-                    if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                    break;
-                }
-            };
-
-        };
-
-        return filtered;
+        this.setState({filtered: filtered})
     }
 
     render() {
         // console.log(this.state);
-        let shoes = Object.values(this.state.shoes);
-        if (this.state.searchTerms.length > 0) {
-            shoes = this.filterShoes(shoes);
-        }
+        let shoes = this.state.filtered;
+        if (shoes.length === 0) return (
+            <div id="products-index-div">
+                <b className="center-everything">
+                    No search results found.
 
-        return (
+                </b>
+            </div>
+        )
+        else return (
             <div className="index-container">
                 <ul className="shoe-listings">
                     {shoes.map(shoe => (

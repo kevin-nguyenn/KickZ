@@ -11,13 +11,14 @@ class Home extends React.Component {
 
     handleSearch(e) {
         e.preventDefault();
-        let searchTerm = document.getElementById("search").value;
-        if (searchTerm.length < 2) {
-            window.location.hash = "#/shoes";
-        } else {
-            window.location.hash = "#/shoes/search";
-            window.location.searchCache = searchTerm;
-        }
+        // let searchTerm = document.getElementById("search").value;
+        // if (searchTerm.length < 2) {
+        //     window.location.hash = "#/shoes";
+        // } else {
+        //     window.location.hash = "#/shoes/search";
+        //     window.location.searchCache = searchTerm;
+        // }
+        window.location.hash = "#/shoes/search";
     }
 
     render() {
@@ -33,9 +34,11 @@ class Home extends React.Component {
                                 <input 
                                     type="text" 
                                     placeholder="🔍 Search for brand..."
+                                    id="search-input"
                                     defaultValue = ""
                                     onChange={this.handleSearch}
                                 />
+                                <input type="submit" style={{ display: 'none' }} />
                             </form>
                         </div>
                     </span>

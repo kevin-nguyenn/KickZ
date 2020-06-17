@@ -139,10 +139,10 @@ class FormContainer extends React.Component {
 
     handleDemoClick(e) {
         // console.log('******* demo clicked');
-        const demoUser = {
+        const demoUser = Object.assign({},{
             username: 'demouser',
             password: 'password'
-        };
+        });
 
         // dispatch(login(demoUser));
         this.props.login(demoUser);

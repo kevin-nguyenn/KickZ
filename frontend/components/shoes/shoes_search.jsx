@@ -26,8 +26,10 @@ class ShoesSearch extends React.Component {
         //     delete window.location.searchCache;
         //     this.setState(newState);
         // };
-        if (this.props.shoes) {
-            this.setState({ shoes: this.props.shoes })
+        let searchedShoes = Object.values(this.props.shoes);
+
+        if (searchedShoes) {
+            this.setState({ shoes: searchedShoes })
             this.filterShoes();
         } else {
             this.props.fetchShoes()
@@ -54,42 +56,52 @@ class ShoesSearch extends React.Component {
             terms = terms.map((word) => word.toLowerCase());
             for (let shoe of shoes) {
                 for (let name of shoe.name.toLowerCase().split(' ')) {
-                    if (terms.includes(name)) {
-                        if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                        break;
+                    for (let term of terms) {
+                        if (name.includes(term)) {
+                            if (!filtered.includes(shoe)) filtered.push(shoe);
+    
+                            break;
+                        }
                     }
                 };
 
                 for (let ticker of shoe.ticker.toLowerCase().split('')) {
-                    if (terms.includes(ticker)) {
-                        if (!filtered.includes(shoe)) filtered.push(shoe);
+                    for (let term of terms) {
+                        if (ticker.includes(term)) {
+                            if (!filtered.includes(shoe)) filtered.push(shoe);
 
-                        break;
+                            break;
+                        }
                     }
                 };
 
                 for (let brand of shoe.brand.toLowerCase().split(' ')) {
-                    if (terms.includes(brand)) {
-                        if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                        break;
+                    for (let term of terms) {
+                        if (brand.includes(term)) {
+                            if (!filtered.includes(shoe)) filtered.push(shoe);
+    
+                            break;
+                        }
                     }
                 };
 
                 for (let colorway of shoe.colorway.toLowerCase().split(' ')) {
-                    if (terms.includes(colorway)) {
-                        if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                        break;
+                    for (let term of terms) {
+                        if (colorway.includes(term)) {
+                            if (!filtered.includes(shoe)) filtered.push(shoe);
+    
+                            break;
+                        }
                     }
                 };
 
                 for (let style_code of shoe.style_code.toLowerCase().split(' ')) {
-                    if (terms.includes(style_code)) {
-                        if (!filtered.includes(shoe)) filtered.push(shoe);
-
-                        break;
+                    for (let term of terms) {
+                        if (style_code.includes(term)) {
+                            if (!filtered.includes(shoe)) filtered.push(shoe);
+    
+                            break;
+                        }
                     }
                 };
 

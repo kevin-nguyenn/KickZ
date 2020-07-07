@@ -14,18 +14,6 @@ class ShoesSearch extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.fetchShoes()
-        //     .then(action => this.setState({ shoes: action.shoes }));
-            
-        // if (window.location.searchCache) {
-        //     let newState = Object.assign({}, this.state);
-        //     newState.searchTerms = [];
-        //     for (let word of window.location.searchCache.split(' ')) {
-        //         newState.searchTerms.push(word);
-        //     }
-        //     delete window.location.searchCache;
-        //     this.setState(newState);
-        // };
         let searchedShoes = Object.values(this.props.shoes);
 
         if (searchedShoes) {

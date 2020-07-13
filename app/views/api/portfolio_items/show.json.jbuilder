@@ -1,0 +1,1 @@
+json.extract! @item, :id, :user_id, :shoe_id, :size, :purchase_price

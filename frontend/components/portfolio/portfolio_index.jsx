@@ -12,18 +12,21 @@ export default class PortfolioIndex extends React.Component {
     componentDidMount() {
         this.props.fetchShoes();
         this.props.fetchPortfolio(this.props.currentUser.id)
-            .then(() => Object.values(this.props.portfolio).forEach(item => this.props.fetchLastSale(item.product_id)));
+            .then(() => Object.values(this.props.portfolio)
+            .forEach(item => this.props.fetchLastSale(item.product_id))
+        );
     }
 
     render() {
         let portfolio = this.props.portfolio;
         let shoes = this.props.shoes;
         let sales = this.props.sales;
+        
         return (
             <div id="portfolio-main">
-                <div id="portfolio-graph-outer">
+                {/* <div id="portfolio-graph-outer">
                     <PortfolioGraphValues portfolio={portfolio} sales={sales} shoes={shoes} />
-                </div>
+                </div> */}
 
                 <span id="portfolio-header">Portfolio</span>
                 <table id="portfolio-table">

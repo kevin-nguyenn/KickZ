@@ -24,31 +24,30 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-            <div className="search-container">
-                <div className="search-background">
-                    <span id="search" className="background">
-                        <div className="search-bar">
-                            <div className="word-set1">Buy and Sell</div>
-                            <div className="word-set2">Authentic Sneakers</div>
-                            <form className="search-input" onSubmit={this.handleSearch}>
-                                <input 
-                                    type="text" 
-                                    placeholder="🔍 Search for brand..."
-                                    id="search-input"
-                                    defaultValue = ""
-                                    // onChange={this.handleSearch}
-                                />
-                                <input type="submit" style={{ display: 'none' }} />
-                            </form>
-                        </div>
-                    </span>
+                <div className="search-container">
+                    <div className="search-background">
+                        <span id="search" className="background">
+                            <div className="search-bar">
+                                <div className="word-set1">Buy and Sell</div>
+                                <div className="word-set2">Authentic Sneakers</div>
+                                <form className="search-input" onSubmit={this.handleSearch}>
+                                    <input 
+                                        type="text" 
+                                        placeholder="🔍 Search for brand..."
+                                        id="search-input"
+                                        defaultValue = ""
+                                        // onChange={this.handleSearch}
+                                    />
+                                    <input type="submit" style={{ display: 'none' }} />
+                                </form>
+                            </div>
+                        </span>
+                    </div>
                 </div>
-            </div>
 
-            <div className="filler"></div>
+                <div className="filler"></div>
 
-            <SlideShow />
-
+                <SlideShow />
             </div>
         );
     }

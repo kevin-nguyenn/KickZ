@@ -16,7 +16,7 @@ class ShoesSearch extends React.Component {
     componentDidMount() {
         let searchedShoes = Object.values(this.props.shoes);
 
-        if (searchedShoes) {
+        if (searchedShoes.length) {
             this.setState({ shoes: searchedShoes })
             this.filterShoes();
         } else {

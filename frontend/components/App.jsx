@@ -28,7 +28,7 @@ const App = () => {
                     <Route exact path="/shoes" component={ShoeIndexContainer}/>
                     <Route path="/shoes/:shoeId" component={ShoeDetailContainer}/>
                     <Route path="/shoes/search" component={ShoeSearchContainer}/>
-                    <ProtectedRoute path="/profile" component={ProfileContainer}/>
+                    <Route path="/profile" component={ProfileContainer}/>
                     <Route exact path="/" component={HomeContainer}/>
                 </Switch>
             </main>

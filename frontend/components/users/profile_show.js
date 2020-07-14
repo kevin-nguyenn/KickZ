@@ -5,7 +5,13 @@ class ProfileShow extends React.Component {
         super(props)
     };
 
+    // componentDidUpdate();
+
     render() {
+        if (!this.props.currentUser) return (
+            <div></div>
+        );
+        let key = Object.keys(this.props.currentUser)[0];
 
         return (
             <div className="profile-show">
@@ -13,7 +19,7 @@ class ProfileShow extends React.Component {
                     PROFILE
                 </div>
                 <p className="profile-gretting">
-                    Hi, {this.props.currentUser[1].username}.
+                    Hi, {this.props.currentUser[key].username}.
                     {/* ^^^ might only work for demouser */}
                 </p>
                 <p className="profile-message">

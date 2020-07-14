@@ -74,7 +74,10 @@ class FormContainer extends React.Component {
         // e.preventDefault();
         const { loginUser } = this.state;
         // console.log('******* submit login');
-        dispatch(login(loginUser));
+        // dispatch(login(loginUser));
+        this.props.login(loginUser).then(() =>
+            this.props.history.push("/profile")
+        );
     }
 
     handleSignupSubmit(e) {
@@ -143,10 +146,12 @@ class FormContainer extends React.Component {
             username: 'demouser',
             password: 'password'
         });
+        // debugger
 
         // dispatch(login(demoUser));
-        this.props.login(demoUser);
-        this.props.history.push("/profile");
+        this.props.login(demoUser).then(() => 
+            this.props.history.push("/profile")
+        );
     }
 
     renderLogin() {

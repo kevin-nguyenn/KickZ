@@ -8,7 +8,9 @@ const shoesReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_SHOES:
-            return Object.assign({}, action.shoes);
+            let newState = Object.assign({}, oldState);
+            action.shoes.forEach(shoe => newState[shoe.id] = shoe);
+            return newState;
 
         case RECEIVE_SHOE:
             const shoe = action.shoe;

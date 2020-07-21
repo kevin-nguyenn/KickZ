@@ -22,36 +22,31 @@ Array.prototype._formatDateFromString = function () {
 class PortfolioItem extends React.Component {
     constructor(props) {
         super(props);
-        // console.log('here');
-        // console.dir(this.props);
-        this.handleDelete = this.handleDelete.bind(this);
+
         this.state = {
             item: (this.props.item ? this.props.item : {}),
-            product: (this.props.products[this.props.item.product_id] ? this.props.products[this.props.item.product_id] : {}),
+            shoe: (this.props.shoes[this.props.item.shoe_id] ? this.props.shoes[this.props.item.shoe_id] : {}),
             sale: (this.props.sales.lastSale ? this.props.sales.lastSale : {})
         };
+
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
-        let p_id = this.state.item.product_id
-        if (!this.props.products[p_id]) this.props.fetchProduct(p_id);
-        // this.props.fetchLastSale(p_id).then((action)=>this.setState({sales: { [action.sale.product_id]: { lastSale: action.sale }}}));
-        // console.dir(this.props);
+        let s_id = this.state.item.shoe_id
+        if (!this.props.shoes[s_id]) this.props.fetchShoe(s_id);
     }
 
     handleDelete(e) {
         e.preventDefault();
         this.props.removeItem(this.props.item.id);
-        this.setState({ item: {}, product: {}, sale: {} });
-        // console.dir(this.context);
-        // this.setState(this.state.a ? {a: false} : {a: true});
-        // this.forceUpdate();
+        this.setState({ item: {}, shoe: {}, sale: {} });
     }
 
     render() {
-        let product = this.state.product;
+        let shoe = this.state.shoe;
         let item = this.state.item;
-        if (isEmpty(product) || isEmpty(item)) return (null);
+        if (isEmpty(shoe) || isEmpty(item)) return (null);
         let size = ["n/a", "n/a"];
         if (item) size = item.size.split(' ');
         let date = item.updated_at;
@@ -68,14 +63,14 @@ class PortfolioItem extends React.Component {
                 </td>
                 <td className="portfolio-col2 portfolio-item-info">
                     <span className="portfolio-item-pic">
-                        <img src={product.img_path} width="80px" />
+                        <img src={shoe.photoUrl} width="80px" />
                     </span>
-                    <Link to={`/products/${product.id}/view`}>
+                    <Link to={`/products/${shoe.id}/view`}>
                         <ul className="portfolio-item-details">
-                            <li>{product.model}</li>
-                            <li>{product.name}</li>
-                            <li>U.S. {size[0] === "M" ? `Men's Size: ${size[1]}` : size[0] === 'F' ? `Women's Size: ${size[1]}` : `Kids' Size: ${size[1]}`}</li>
-                            <li>{product.release_date ? product.release_date.split('-')[0] : ""}</li>
+                            <li>{shoe.name}</li>
+                            <li>U.S. 10</li>
+                            <li>{shoe.release_date ? shoe.release_date.split('-')[0] : ""}</li>
+                            <li>{shoe.ticker}</li>
                         </ul>
                     </Link>
                 </td>

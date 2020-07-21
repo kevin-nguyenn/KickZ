@@ -4,7 +4,7 @@ import React from 'react';
 import isEmpty from '../../util/object_api_util';
 import { Link } from 'react-router-dom';
 
-export default class PortfolioIndex extends React.Component {
+class PortfolioIndex extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -13,7 +13,7 @@ export default class PortfolioIndex extends React.Component {
         this.props.fetchShoes();
         this.props.fetchPortfolio(this.props.currentUser.id)
             .then(() => Object.values(this.props.portfolio)
-            .forEach(item => this.props.fetchLastSale(item.product_id))
+            .forEach(item => this.props.fetchLastSale(item.shoe_id))
         );
     }
 
@@ -50,3 +50,5 @@ export default class PortfolioIndex extends React.Component {
         )
     }
 }
+
+export default PortfolioIndex;

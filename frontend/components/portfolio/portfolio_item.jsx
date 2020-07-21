@@ -65,7 +65,7 @@ class PortfolioItem extends React.Component {
                     <span className="portfolio-item-pic">
                         <img src={shoe.photoUrl} width="80px" />
                     </span>
-                    <Link to={`/products/${shoe.id}/view`}>
+                    <Link to={`/shoes/${shoe.id}/view`}>
                         <ul className="portfolio-item-details">
                             <li>{shoe.name}</li>
                             <li>U.S. 10</li>

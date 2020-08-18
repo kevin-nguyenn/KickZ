@@ -20,6 +20,7 @@ class Profile extends React.Component {
                 <div className="profile-contents">
                     <Route exact path="/profile" component={ProfileShowContainer} />
                     <ProtectedRoute path="/profile/cop-list" component={FollowsContainer} />
+                    <ProtectedRoute path="/profile/portfolio" component={PortfolioIndexContainer}  />
                 </div>
             </div>
         )

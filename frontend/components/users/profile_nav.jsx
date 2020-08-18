@@ -43,6 +43,12 @@ class ProfileNav extends React.Component {
                         <span className="nav-title">Following</span>
                     </li>
                 </Link>
+                <Link to="/profile/portfolio">
+                    <li id="prof-nav-portfolio" className="profile-nav-item" onClick={this.changeSelected}>
+                        <span className="nav-icon-img">📈</span>
+                        <span className="nav-title">Portfolio</span>
+                    </li>
+                </Link>
             </ul>
         )
     }

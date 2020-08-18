@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom';
 import { ProtectedRoute } from '../../util/route_util';
 import ProfileNavContainer from './profile_nav_container';
 import ProfileShowContainer from './profile_show_container';
-import FollowsContainer from '../follows/follows_container'
+import FollowsContainer from '../follows/follows_container';
+import PortfolioIndexContainer from '../portfolio/portfolio_index_container';
 
 class Profile extends React.Component {
     constructor(props) {

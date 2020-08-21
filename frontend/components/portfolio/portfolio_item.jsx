@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom';
-import isEmpty from '../../utils/obj-util';
+import isEmpty from '../../util/object_api_util';
 
 Array.prototype.rotateRight = function (n) {
     this.unshift(this.splice(n, this.length))

@@ -1,5 +1,5 @@
 import React from 'react';
-// import PortfolioItemContainer from './portfolio_item_container';
+import PortfolioItemContainer from './portfolio_item_container';
 // import PortfolioGraphValues from './portfolio_graph_values';
 import isEmpty from '../../util/object_api_util';
 import { Link } from 'react-router-dom';

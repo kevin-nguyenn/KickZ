@@ -1,4 +1,4 @@
-import * as PortfolioAPIUtil from '../utils/api-portfolio-util';
+import * as PortfolioAPIUtil from '../util/portofolio_api_util';
 
 export const RECEIVE_PORTFOLIO = 'RECEIVE_PORTFOLIO';
 export const RECEIVE_ITEM = 'RECEIVE_ITEM';

@@ -23,14 +23,14 @@ class PortfolioIndex extends React.Component {
         let sales = this.props.sales;
         
         return (
-            <div id="portfolio-main">
+            <div className="portfolio-main">
                 {/* <div id="portfolio-graph-outer">
                     <PortfolioGraphValues portfolio={portfolio} sales={sales} shoes={shoes} />
                 </div> */}
 
-                <span id="portfolio-header">Portfolio</span>
-                <table id="portfolio-table">
-                    <thead id="portfolio-table-heading">
+                <span className="portfolio-header">Portfolio</span>
+                <table className="portfolio-table">
+                    <thead className="portfolio-table-heading">
                         <tr className="portfolio-row">
                             <th className="portfolio-col1"></th>
                             <th className="portfolio-col2" id="portfolio-center-this">Name</th>

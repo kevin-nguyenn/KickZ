@@ -85,7 +85,7 @@ const saleOrders = ({ shoe, sales, orders, updateOrder, createSale, addItem, cur
                     date: dateString
                 }
                 createSale(sale).then(() => {
-                    window.refresh();
+                    window.reload();
                 })
             })
         }

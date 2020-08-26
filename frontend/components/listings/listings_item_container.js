@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-// import { removeItem } from '../../actions/portfolio';
 import { updateOrder } from '../../actions/order_actions';
 import { fetchOrdersByProduct } from '../../actions/order_actions';
 

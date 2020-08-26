@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import { fetchShoes } from '../../actions/shoe_actions';
-import { fetchLastSale } from '../../actions/sales';
-import { fetchOrders } from '../../actions/orders'
+import { fetchLastSale } from '../../actions/sale_actions';
+import { fetchOrders } from '../../actions/order_actions'
 
 import Listings from './listings';
 
 const mapStateToProps = (state) => {
-    let isLoggedIn = (state.session.currentUserId ? true : false);
+    let isLoggedIn = (state.session.id ? true : false);
     return ({
-        currentUser: (isLoggedIn ? state.entities.currentUser : null),
+        currentUser: (isLoggedIn ? state.entities.users : null),
         shoes: state.entities.shoes,
         sales: state.entities.sales,
         orders: state.entities.orders

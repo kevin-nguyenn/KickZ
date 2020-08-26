@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { addItem } from "../../actions/portfolio";
+import { addItem } from "../../actions/portfolio_actions";
 import { fetchShoes } from "../../actions/shoe_actions";
-import { resetErrors } from "../../actions/errors";
+// import { resetErrors } from "../../actions/errors";
 // import { fetchPortfolio } from "../../utils/api-portfolio-util";
 
 import PortfolioForm from "./portfolio_form";
